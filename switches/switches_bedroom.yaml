@@ -1,0 +1,29 @@
+  # #Broadlink IR
+  # - platform: broadlink
+    # host: 192.168.0.21
+    # mac: 'B4:43:0D:EF:95:8F'
+    # switches:
+      # reciever:
+        # command_on: 'JgBYAEcZGC8YMRcZGDAZFxcZFxkYGhkYGBsYGBkYGRgXMRkZFwAM+0kXGS8YMRcZGDAZFxcZFxkYGhkZFxsZGBkXGRgXMRkZFwAGa0gXFzEYAAZ5RxkXMBoADQU='
+        # command_off: 'JgBIAEYZFzEZLxcZGDEXGRkXGBcaGRcaGBsYGBkYGBkZFxgaGAAM70kYGC8aLxgYGDEYFxkXGBgaGRgZGBoZGBgZGBgZGBgaFwANBQ=='
+        # friendly_name: Bedroom IR
+ 
+  # - platform: mqtt
+    # name: "Bedroom Main"
+    # state_topic: "rooms/bedroom/light/switch1"
+    # command_topic: "rooms/bedroom/light/switch1"
+    # payload_on: "on"
+    # payload_off: "off"
+    # optimistic: false
+    # retain: true
+    # qos: 1
+ 
+  # - platform: mqtt
+    # name: "James Blanket"
+    # state_topic: "rooms/bedroom/james/blanket/switch1"
+    # command_topic: "rooms/bedroom/james/blanket/switch1"
+    # payload_on: "on"
+    # payload_off: "off"
+    # optimistic: false
+    # retain: true
+    # qos: 1

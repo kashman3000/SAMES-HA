@@ -1,0 +1,17 @@
+james_oppo:
+  hide_if_away: false
+  icon:
+  mac:
+  name: James
+  picture:
+  track: true
+  vendor:
+
+sammy_mobile:
+  hide_if_away: false
+  icon:
+  mac:
+  name: sammy
+  picture:
+  track: true
+  vendor:

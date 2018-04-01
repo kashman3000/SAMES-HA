@@ -1,0 +1,900 @@
+#################################
+###       AUTOMATION          ###
+#################################
+         
+       
+#################################
+###   BEDROOM AUTOMATION      ###
+#################################
+
+ - id: auto23
+   alias: "Family Motion On"
+   trigger:
+     platform: state
+     entity_id: binary_sensor.motion_sensor_158d000113e096
+     to: 'on'
+   condition:
+     condition: and
+     conditions:
+       - condition: time
+         after: '10:00:00'
+         before: '07:00:00'
+       - condition: state
+         entity_id: switch.sleep_mode
+         state: 'on'
+   action:
+       service: script.turn_on
+       entity_id: script.timed_family_night
+
+#################################
+###    OFFICE AUTOMATION      ###
+#################################
+
+ - id: auto223
+   alias: "Office Alert"
+   trigger:
+     platform: state
+     entity_id: binary_sensor.motion_sensor_158d00011027b1
+     from: 'off'
+     to: 'on'
+   condition:
+     condition: state
+     entity_id: input_boolean.office_alert
+     state: 'on'
+   action:
+       service: script.turn_on
+       entity_id: script.study_alert
+
+#################################
+###   DOORBELL AUTOMATION     ###
+#################################
+ # - id: doorbell
+   # alias: "Door Bell Single Press"
+   # trigger:
+     # platform: event
+     # event_type: click
+     # event_data:
+         # entity_id: binary_sensor.switch_158d0001870795
+         # click_type: single
+   # action:
+       # service: script.turn_on
+       # entity_id: script.door_bell
+        
+#################################
+###      TEMP AUTOMATION      ###
+#################################
+
+ # - id: auto8
+   # alias: "Hot Bedroom"
+   # trigger:
+     # platform: numeric_state
+     # entity_id: sensor.broadlink_sensor_temperature
+     # above: 27
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: time
+         # after: '7:00:00'
+         # before: '20:00:00'
+       # - condition: state
+         # entity_id: device_tracker.jameskj
+         # state: 'not_home'
+   # action:
+    # - service: notify.James6P
+      # data:
+        # message: 'Bedroom above 27'
+        # title: 'HOT'
+
+#################################
+###      JAMES AUTOMATION     ###
+#################################
+
+ # - id: auto9
+   # alias: "James Elec Blanket"
+   # trigger:
+     # platform: time
+     # at: '19:45:00'
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: state
+         # entity_id: device_tracker.jameskj
+         # state: 'home'
+   # action:
+    # - service: switch.turn_on
+      # entity_id: switch.james_blanket
+        
+#################################
+###         TEMP NIGHT        ###
+#################################
+
+        
+ # - id: auto10
+   # alias: "Cold Bedroom"
+   # trigger:
+     # platform: numeric_state
+     # entity_id: sensor.broadlink_sensor_temperature
+     # below: 20
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: time
+         # after: '05:00:00'
+         # before: '06:00:00'
+       # - condition: state
+         # entity_id: sun.sun
+         # state: 'below_horizon'
+   # action:
+    # - service: switch.turn_on
+      # entity_id: switch.dyson
+        
+ # - id: auto11
+   # alias: "Cold Bedroom"
+   # trigger:
+     # platform: numeric_state
+     # entity_id: sensor.broadlink_sensor_temperature
+     # above: 21.00
+     # below: 26.5
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: time
+         # after: '05:00:00'
+         # before: '06:00:00'
+       # - condition: state
+         # entity_id: sun.sun
+         # state: 'below_horizon'
+   # action:
+    # - service: switch.turn_off
+      # entity_id: switch.dyson
+      
+ # - id: coldmornweekday
+   # alias: "Cold Mornning Weekdays"
+   # trigger:
+     # platform: time
+     # at: '05:30:00'
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: state
+         # entity_id: switch.away_mode
+         # state: 'off'
+       # - condition: time
+         # weekday:
+           # - mon
+           # - tue
+           # - wed
+           # - thu
+           # - fri
+   # action:
+    # - service: script.turn_on
+      # entity_id: script.heater_on
+
+ # - id: coldmornweekend
+   # alias: "Cold Mornning Weekend"
+   # trigger:
+     # platform: time
+     # at: '06:45:00'
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: state
+         # entity_id: switch.away_mode
+         # state: 'off'
+       # - condition: time
+         # weekday:
+           # - sat
+           # - sun
+   # action:
+    # - service: script.turn_on
+      # entity_id: script.heater_on
+      
+        
+#################################
+###    BUTTON AUTOMATION      ###
+#################################        
+ # - id: auto12
+   # alias: "Button Single Press"
+   # trigger:
+     # platform: event
+     # event_type: click
+     # event_data:
+         # entity_id: binary_sensor.switch_158d00013ecbc9
+         # click_type: single
+   # action:
+       # service: switch.toggle
+       # entity_id: switch.bedroom_main
+       
+ # - id: auto13
+   # alias: "Button Double Press"
+   # trigger:
+     # platform: event
+     # event_type: click
+     # event_data:
+         # entity_id: binary_sensor.switch_158d00013ecbc9
+         # click_type: double
+   # action:
+     # service: scene.turn_on
+     # entity_id: scene.bedroom_night_light
+       
+ # - id: auto14
+   # alias: "Button Long Press"
+   # trigger:
+     # platform: event
+     # event_type: click
+     # event_data:
+         # entity_id: binary_sensor.switch_158d00013ecbc9
+         # click_type: long_click_press
+   # action:
+     # service: tts.google_say
+     # data:
+       # entity_id: media_player.family_room_home
+       # message: 'Good night Sam and James.  Let me prepare the house for night time.'
+       # cache: true
+       
+       
+#################################
+###      PLUG AUTOMATION      ###
+#################################    
+ - id: auto15
+   alias: "JAMES BLANKET ON"
+   trigger:
+     platform: state
+     entity_id: switch.james_blanket
+     to: 'on'
+   action:
+     service: switch.turn_on
+     entity_id: switch.plug_158d0001291c87
+     
+ - id: auto17
+   alias: "JAMES BLANKET OFF"
+   trigger:
+     platform: state
+     entity_id: switch.james_blanket
+     to: 'off'
+   action:
+     service: switch.turn_off
+     entity_id: switch.plug_158d0001291c87
+
+ - id: blanketon
+   alias: "JAMES BLANKET ON"
+   trigger:
+     platform: state
+     entity_id: switch.plug_158d0001291c87
+     to: 'on'
+   action:
+     service: switch.turn_on
+     entity_id: switch.james_blanket
+     
+     
+ - id: blanketoff
+   alias: "JAMES BLANKET OFF"
+   trigger:
+     platform: state
+     entity_id: switch.plug_158d0001291c87
+     to: 'off'
+   action:
+     service: switch.turn_off
+     entity_id: switch.james_blanket
+     
+ - id: auto16
+   alias: "James Blanket Alert"
+   trigger:
+     platform: state
+     entity_id: switch.james_blanket
+     to: 'on'
+   condition:
+     condition: state
+     entity_id: switch.sleep_mode
+     state: 'off'
+   action:
+     service: tts.google_say
+     data:
+       entity_id: media_player.family_room_google_home
+       message: 'James, your warm blanket is now on.'
+       cache: true
+     
+
+
+ - id: auto18
+   alias: "James Blanket Alert"
+   trigger:
+     platform: state
+     entity_id: switch.james_blanket
+     to: 'off'
+   condition:
+     condition: state
+     entity_id: switch.sleep_mode
+     state: 'off'
+   action:
+     service: tts.google_say
+     data:
+       entity_id: media_player.family_room_google_home
+       message: 'James, your warm blanket is now safely off.'
+       cache: true     
+      
+#################################
+###    SWITCH AUTOMATION      ###
+#################################
+
+ # - id: auto21
+   # alias: "Bedroom Main On"
+   # trigger:
+     # platform: state
+     # entity_id: switch.bedroom_main
+     # to: 'on'
+   # action:
+     # service: scene.turn_on
+     # entity_id: scene.bedroom_normal_light
+     
+ # - id: auto22
+   # alias: "Bedroom Main Off"
+   # trigger:
+     # platform: state
+     # entity_id: switch.bedroom_main
+     # to: 'off'
+   # action:
+     # service: light.turn_off
+     # entity_id: light.bedroom_main
+
+#################################
+###   PEPPERCORN AUTOMATION   ###
+#################################
+ # - id: auto23
+   # alias: "Peppercorn Motion On"
+   # trigger:
+     # platform: state
+     # entity_id: binary_sensor.motion_sensor_158d00011027b1
+     # to: 'on'
+   # condition:
+     # condition: time
+     # after: '18:00:00'
+     # before: '07:00:00'
+   # action:
+       # service: script.turn_on
+       # entity_id: script.timed_peppercorn_night
+
+ # - id: auto24
+   # alias: "Peppercorn Night Light On"
+   # trigger:
+     # platform: state
+     # entity_id: light.peppercorn_light
+     # to: 'on'
+   # condition:
+     # condition: time
+     # after: '18:00:00'
+     # before: '07:00:00'
+   # action:
+     # service: scene.turn_on
+     # entity_id: scene.night_light
+
+ # - id: auto25
+   # alias: "Peppercorn Night Light Off"
+   # trigger:
+     # platform: state
+     # entity_id: light.peppercorn_light
+     # to: 'off'
+   # condition:
+     # condition: time
+     # after: '18:00:00'
+     # before: '07:00:00'
+   # action:
+     # service: light.turn_off
+     # entity_id: group.peppercorn
+
+ # - id: auto26
+   # alias: "Hot Peppercorn"
+   # trigger:
+     # platform: numeric_state
+     # entity_id: ensor.temperature_158d000159c9e8
+     # above: 27
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: time
+         # after: '7:00:00'
+         # before: '21:30:00'
+       # - condition: state
+         # entity_id: device_tracker.jameskj
+         # state: 'home'
+   # action:
+    # - service: notify.James6P
+      # data:
+        # message: 'Peppercorn above 27'
+        # title: 'HOT'
+        
+#################################
+###     JAMES AUTOMATION      ###
+#################################
+ # - id: auto27
+   # alias: "James Comes Home Night"
+   # trigger:
+     # platform: state
+     # entity_id: device_tracker.c709ca32
+     # from: 'not_home'
+     # to: 'home'
+   # condition:
+     # condition: time
+     # after: '18:00:00'
+     # before: '07:00:00'
+   # action:
+     # service: scene.turn_on
+     # entity_id: scene.sames_welcome_night 
+     
+ - id: auto28
+   alias: "Alert James when Sam Comes Home"
+   trigger:
+     platform: state
+     entity_id: binary_sensor.sam_home
+     from: 'off'
+     to: 'on'
+   # condition:
+     # condition: state
+     # entity_id: device_tracker.sammy_mobile
+     # state: 'home'
+   action:
+     service: notify.James6P
+     data:
+       message: 'Sam is arriving home'
+       title: 'SAM HOME'
+     
+ - id: auto265
+   alias: "Alert James when Sam Laves Home"
+   trigger:
+     platform: state
+     entity_id: binary_sensor.sam_home
+     from: 'on'
+     to: 'off'
+   action:
+     service: notify.James6P
+     data:
+       message: 'Sam is leaving home'
+       title: 'SAM LEFT HOME'
+     
+ - id: auto28
+   alias: "Alert James when James Comes Home"
+   trigger:
+     platform: state
+     entity_id: binary_sensor.james_home
+     from: 'off'
+     to: 'on'
+   # condition:
+     # condition: state
+     # entity_id: device_tracker.james_oppo
+     # state: 'home'
+   action:
+     service: notify.James6P
+     data:
+       message: 'James is arriving home'
+       title: 'JAMES HOME'
+     
+ - id: auto265
+   alias: "Alert James when James Leaves Home"
+   trigger:
+     platform: state
+     entity_id: binary_sensor.james_home
+     from: 'on  '
+     to: 'off'
+   action:
+     service: notify.James6P
+     data:
+       message: 'James is leaving home'
+       title: 'JAMES LEFT HOME'
+          
+     
+     
+#################################
+###     SAM AUTOMATION        ###
+#################################
+ # - id: auto29
+   # alias: "Sam Comes Home Night"
+   # trigger:
+     # platform: state
+     # entity_id: device_tracker.ce0916095403c82704
+     # from: 'not_home'
+     # to: 'home'
+   # condition:
+     # condition: time
+     # after: '18:00:00'
+     # before: '07:00:00'
+   # action:
+     # service: scene.turn_on
+     # entity_id: scene.sames_welcome_night
+     
+#################################
+###      BOTH AUTOMATION      ###
+#################################     
+ # - id: auto30
+   # alias: 'Set Away Mode On when we leave'
+   # trigger:
+     # platform: state
+     # entity_id: group.all_devices
+     # from: 'home'
+     # to: 'not_home'
+   # action:
+     # service: switch.turn_on
+     # entity_id: switch.away_mode
+     
+ # - id: auto31
+   # alias: 'Set Away Mode OFF when we are home'
+   # trigger:
+     # platform: state
+     # entity_id: group.all_devices
+     # from: 'not_home'
+     # to: 'home'
+   # action:
+     # service: switch.turn_off
+     # entity_id: switch.away_mode
+     
+#################################
+###  SECURITY : AWAY MODE     ###
+#################################  
+ - id: auto32
+   alias: "Away Mode Triggered On"
+   trigger:
+     platform: state
+     entity_id: switch.away_mode
+     from: 'off'
+     to: 'on'
+   action:
+       service: script.turn_on
+       entity_id: script.security_away_on
+
+ - id: auto33
+   alias: "Away Mode Triggered off"
+   trigger:
+     platform: state
+     entity_id: switch.away_mode
+     from: 'on'
+     to: 'off'
+   action:
+       service: script.turn_on
+       entity_id: script.security_away_off
+       
+### DETECTED MOTION DURING Away
+
+ # - id: auto34
+   # alias: "Motion Triggered While Away"
+   # trigger:
+     # platform: state
+     # entity_id: sensor.motion_alert_trigger
+     # to: 'on'
+   # condition:
+     # condition: state
+     # entity_id: switch.away_mode
+     # state: 'away'
+   # action:
+       # service: script.turn_on
+       # entity_id: script.motion_detected
+       
+
+              
+       
+#################################
+###  SECURITY : SLEEP MODE    ###
+#################################          
+
+ - id: auto7
+   alias: "Sleep Mode Off"
+   trigger:
+     platform: state
+     entity_id: sun.sun
+     from: 'below_horizon'
+     to: 'above_horizon'
+   action:
+       service: switch.turn_off
+       entity_id: switch.sleep_mode
+
+ - id: auto35
+   alias: "Sleep Mode Triggered On"
+   trigger:
+     platform: state
+     entity_id: switch.sleep_mode
+     from: 'off'
+     to: 'on'
+   action:
+       service: script.turn_on
+       entity_id: script.sleep_mode_on
+       
+ - id: auto36
+   alias: "Sleep Mode Triggered Off"
+   trigger:
+     platform: state
+     entity_id: switch.sleep_mode
+     from: 'on'
+     to: 'off'
+   action:
+       service: script.turn_on
+       entity_id: script.sleep_mode_off
+       
+ - id: auto360
+   alias: "Any Door Triggered During Night Mode"
+   trigger:
+     platform: state
+     entity_id: sensor.door_alert_trigger
+     from: 'off'
+     to: 'on'
+   condition:
+     condition: state
+     entity_id: switch.sleep_mode
+     state: 'on'
+   action:
+       service: script.turn_on
+       entity_id: script.motion_detected
+     
+
+
+#################################
+###      SECURITY : ARLO      ###
+#################################
+
+ - id: auto37
+   alias: "Arlo Armed"
+   trigger:
+     platform: state
+     entity_id: switch.arlo_status
+     from: 'off'
+     to: 'on'
+   action:
+       service: script.turn_on
+       entity_id: script.arlo_armed
+       
+ - id: auto38
+   alias: "Arlo Disarmed"
+   trigger:
+     platform: state
+     entity_id: switch.arlo_status
+     from: 'on'
+     to: 'off'
+   action:
+       service: script.turn_on
+       entity_id: script.arlo_disarmed
+           
+ - id: auto39
+   alias: "Arlo Alert at night"
+   trigger:
+     platform: state
+     entity_id: sensor.security_arlo_alert_night
+     from: 'off'
+     to: 'on'
+   action:
+       service: script.turn_on
+       entity_id: script.arlo_alert_night
+       
+       
+#################################
+###    SECURITY : JAMES       ###
+#################################   
+
+# JAMES LEAVES
+ # - id: auto40
+   # alias: "James Away - Activate Security"
+   # trigger:
+     # platform: state
+     # entity_id: sensor.james_location
+     # from: 'home'
+     # to: 'away'
+   # condition:
+     # condition: state
+     # entity_id: sensor.sam_location
+     # state: 'away'
+   # action:
+     # service: mqtt.publish
+     # data:
+       # topic: 'security/away/STATUS'
+       # payload: 'on'
+       # retain: 'true'
+ 
+# JAMES COMES HOME 
+ # - id: auto41
+   # alias: "James HOME - De-activate Security"
+   # trigger:
+     # platform: state
+     # entity_id: sensor.james_location
+     # from: 'away'
+     # to: 'home'
+   # action:
+     # service: mqtt.publish
+     # data:
+       # topic: 'security/away/STATUS'
+       # payload: 'off'
+       # retain: 'true'
+       
+#################################
+###    SECURITY : SAM         ###
+#################################
+
+# # SAM LEAVES
+ # - id: auto42
+   # alias: "Sam Away - Activate Security"
+   # trigger:
+     # platform: state
+     # entity_id: sensor.sam_location
+     # to: 'away'
+   # condition:
+     # condition: state
+     # entity_id: sensor.james_location
+     # state: 'away'
+   # action:
+     # service: mqtt.publish
+     # data:
+       # topic: 'security/away/STATUS'
+       # payload: 'on'
+       # retain: 'true'
+          
+
+# ## SAME COMES HOME     
+ # - id: auto43
+   # alias: "Sam HOME - De-activate Security"
+   # trigger:
+     # platform: state
+     # entity_id: sensor.sam_location
+     # to: 'home'
+   # action:
+     # service: mqtt.publish
+     # data:
+       # topic: 'security/away/STATUS'
+       # payload: 'off'
+       # retain: 'true'
+
+#################################
+###   STUDY AUTOMATION        ###
+#################################
+ # - id: auto44
+   # alias: "Game Dota 2 Starts"
+   # trigger:
+     # platform: state
+     # entity_id: sensor.game
+     # to: 'Dota 2'
+   # action:
+     # service: scene.turn_on
+     # entity_id: scene.study_game
+     
+ # - id: auto45
+   # alias: "Game Dota 2 Stops"
+   # trigger:
+     # platform: state
+     # entity_id: sensor.game
+     # from: 'Dota 2'
+     # to: 'None'
+   # action:
+     # service: scene.turn_on
+     # entity_id: scene.study_normal
+     
+ # - id: auto58
+   # alias: "Study Enter"
+   # trigger:
+     # platform: state
+     # entity_id: light.study_light
+     # from: 'off'
+     # to: 'on'
+   # action:
+     # service: script.turn_on
+     # entity_id: script.study_enter
+     
+ # - id: auto59
+   # alias: "Study Leave"
+   # trigger:
+     # platform: state
+     # entity_id: light.study_light
+     # from: 'on'
+     # to: 'off'
+   # action:
+     # service: script.turn_on
+     # entity_id: script.study_leave
+           
+#################################
+###       STUDY BUTTONS       ###
+#################################
+
+ # - id: auto46
+   # alias: "Button Single Press"
+   # trigger:
+     # platform: event
+     # event_type: click
+     # event_data:
+         # entity_id: binary_sensor.switch_158d0001288a6b
+         # click_type: single
+   # action:
+     # service: switch.toggle
+     # entity_id: switch.study_light
+
+ # - id: auto47
+   # alias: "Button Double Press"
+   # trigger:
+     # platform: event
+     # event_type: click
+     # event_data:
+         # entity_id: binary_sensor.switch_158d0001288a6b
+         # click_type: double
+   # action:
+       # service: script.turn_on
+       # entity_id: script.study_leave
+       
+ - id: auto48
+   alias: "Hot Study"
+   trigger:
+     platform: numeric_state
+     entity_id: sensor.temperature_158d000159c982
+     above: 27
+   condition:
+     condition: and
+     conditions:
+       - condition: time
+         after: '7:00:00'
+         before: '21:00:00'
+       - condition: state
+         entity_id: device_tracker.jameskj
+         state: 'not_home'
+   action:
+    - service: notify.James6P
+      data:
+        message: 'Study: HOT'
+        title: 'HOT'
+        
+ # - id: auto49
+   # alias: "Long Press Test"
+   # trigger:
+     # platform: event
+     # event_type: click
+     # event_data:
+         # entity_id: binary_sensor.switch_158d0001288a6b
+         # click_type: long_click_press
+   # action:
+    # - service: shell_command.play_fart
+      
+#################################
+###       STUDY LIGHTS        ###
+#################################
+
+ # - id: auto50
+   # alias: "Light On Externally"
+   # trigger:
+     # platform: state
+     # entity_id: light.study_light
+     # from: 'off'
+     # to: 'on'
+   # action:
+     # service: mqtt.publish
+     # data:
+       # topic: 'rooms/study/light/switch1'
+       # payload: 'on'
+       # retain: 'true'
+       
+ # - id: auto51
+   # alias: "Light Off Externally"
+   # trigger:
+     # platform: state
+     # entity_id: light.study_light
+     # from: 'on'
+     # to: 'off'
+   # action:
+     # service: mqtt.publish
+     # data:
+       # topic: 'rooms/study/light/switch1'
+       # payload: 'off'
+       # retain: 'true'
+
+#################################
+###       STUDY SWITCHES      ###
+#################################
+
+ # - id: auto52
+   # alias: "Light Switch Off"
+   # trigger:
+     # platform: state
+     # entity_id: switch.study_light
+     # to: 'on'
+   # action:
+     # service: light.turn_on
+     # entity_id: light.study_light
+          
+ # - id: auto53
+   # alias: "Light Switch Off"
+   # trigger:
+     # platform: state
+     # entity_id: switch.study_light
+     # to: 'off'
+   # action:
+     # service: light.turn_off
+     # entity_id: light.study_light

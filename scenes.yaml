@@ -1,0 +1,184 @@
+#################################
+###       SCENES              ###
+################################# 
+  - name: study_game
+    entities:
+      light.study_light:
+        state: on
+        transition: 2
+        brightness: 254
+        xy_color: [ 0.6678, 0.3522 ]
+
+  - name: study_normal
+    entities:
+      light.study_light:
+        state: on
+        transition: 2
+        brightness: 254
+        xy_color: [ 0.4448, 0.4066 ]
+ 
+  - name: james_awake
+    entities:
+      light.hallway:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.laundry_1:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.toilet_1:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+        
+  - name: james_asleep
+    entities:
+      light.hallway:
+        state: off
+      light.laundry_1:
+        state: off
+      light.toilet_1:
+        state: off
+        
+  - name: sames_welcome_night
+    entities:
+      light.front_1:
+        state: on
+        transition: 5
+        brightness: 254
+        xy_color: [ 0.4448, 0.4066 ]
+      light.front_door_1:
+        state: on
+        transition: 5
+        brightness: 254
+        xy_color: [ 0.4448, 0.4066 ]
+      light.front_main:
+        state: on
+        transition: 5
+        brightness: 254
+        xy_color: [ 0.4448, 0.4066 ]
+      light.family_room_lamp:
+        state: on
+        transition: 5
+        brightness: 110
+        xy_color: [ 0.4448, 0.4066 ]
+
+  - name: lnormal
+    entities:
+      light.family_bl:
+        state: on
+        transition: 2
+        brightness: 150
+        xy_color: [ 0.4448, 0.4066 ]
+      light.family_fl:
+        state: on
+        transition: 2
+        brightness: 150
+        xy_color: [ 0.4448, 0.4066 ]
+      light.family_br:
+        state: on
+        transition: 2
+        brightness: 150
+        xy_color: [ 0.4448, 0.4066 ]
+      light.family_fr:
+        state: on
+        transition: 2
+        brightness: 150
+        xy_color: [ 0.4448, 0.4066 ]
+      light.family_room_lamp:
+        state: on
+        transition: 2
+        brightness: 150
+        xy_color: [ 0.4448, 0.4066 ]
+
+  - name: ldim
+    entities:
+      light.family_bl:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.family_br:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.family_fl:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.family_fr:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.family_room_lamp:
+        state: off
+
+  - name: night_light
+    entities:
+      light.peppercorn_light:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.peppercorn_lamp_1:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+      light.hallway_1:
+        state: on
+        transition: 2
+        brightness: 150
+        xy_color: [ 0.4448, 0.4066 ]
+
+  - name: night_light_off
+    entities:
+      light.peppercorn_light:
+        state: off
+      light.peppercorn_lamp_1:
+        state: off
+      light.hallway_1:
+        state: off
+        
+  - name: toilet_night
+    entities:
+      light.toilet_1:
+        state: on
+        transition: 1
+        brightness: 50
+        xy_color: [ 0.4448, 0.4066 ]
+      light.laundry_1:
+        state: on
+        transition: 2
+        brightness: 50
+        xy_color: [ 0.4448, 0.4066 ]
+
+  - name: toilet_night_off
+    entities:
+      light.toilet_1:
+        state: off
+      light.laundry_1:
+        state: off
+
+  - name: bedroom_normal_light
+    entities:
+      light.bedroom_main:
+        state: on
+        transition: 1
+        brightness: 1
+        xy_color: [ 0.5926, 0.3814 ]
+        
+  - name: bedroom_night_light
+    entities:
+      light.bedroom_main:
+        state: on
+        transition: 2
+        brightness: 150
+        xy_color: [ 0.4448, 0.4066 ]

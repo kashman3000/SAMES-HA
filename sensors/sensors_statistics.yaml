@@ -1,0 +1,80 @@
+#################################
+###  Statistics SENSORS       ###
+#################################
+  # - platform: statistics
+    # name: "Family Room Stats"
+    # entity_id: sensor.temperature_158d0001531a78
+  # - platform: statistics
+    # name: "Ellie Room Stats"
+    # entity_id: sensor.temperature_158d000159c9e8
+  # - platform: statistics
+    # name: "Average Air Condition"
+    # entity_id: sensor.waqi_box_hill_australia
+      
+  # - platform: waqi
+    # token: d8ff4fd9c2286d252505aadd226c8943234d9081
+    # locations:
+      # - australia
+    # stations:
+      # - Box Hill, Australia
+
+  # - platform: template
+    # sensors:
+      # local_temp:
+        # friendly_name: 'Local Temperature'
+        # value_template: '{{ states.sensor.waqi_box_hill_australia.attributes.temperature }}'
+        
+  # - platform: template
+    # sensors:
+      # local_rain:
+        # friendly_name: 'Local Rain'
+        # value_template: '{{ states.sensor.waqi_box_hill_australia.attributes.r }}'
+        
+  # - platform: template
+    # sensors:
+      # local_ozone:
+        # friendly_name: 'Local Ozone'
+        # value_template: '{{ states.sensor.waqi_box_hill_australia.attributes.ozone }}'
+        
+  # - platform: template
+    # sensors:
+      # local_wind:
+        # friendly_name: 'Local Wind'
+        # value_template: '{{ states.sensor.waqi_box_hill_australia.attributes.w }}'
+        
+  # - platform: template
+    # sensors:
+      # air_pollution:
+        # friendly_name: 'Air Pollution'
+        # value_template: >-
+          # {% if states.sensor.waqi_box_hill_australia.state | float < 50 %}
+              # Good ({{ states.sensor.waqi_box_hill_australia.state }})
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 100 %}
+              # Moderate ({{ states.sensor.waqi_box_hill_australia.state }})
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 150 %}
+              # Unhealthy for Sensitive Groups ({{ states.sensor.waqi_box_hill_australia.state }})
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 200 %}
+              # Unhealthy ({{ states.sensor.waqi_box_hill_australia.state }})
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 300 %}
+              # Very Unhealthy ({{ states.sensor.waqi_box_hill_australia.state }})
+          # {% elif states.sensor.waqi_box_hill_australia.state | float > 300 %}
+              # Hazardous ({{ states.sensor.waqi_box_hill_australia.state }})
+          # {% else %}
+              # FAILED
+          # {% endif %}
+        # icon_template: >-
+          # {% if states.sensor.waqi_box_hill_australia.state | float < 50 %}
+              # mdi:thumb-up
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 100 %}
+              # mdi:account-alert
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 150 %}
+              # mdi:alert-outline
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 200 %}
+              # mdi:thumb-down
+          # {% elif states.sensor.waqi_box_hill_australia.state | float < 300 %}
+              # mdi:alert
+          # {% elif states.sensor.waqi_box_hill_australia.state | float > 300 %}
+              # mdi:alert
+          # {% else %}
+              # FAILED
+          # {% endif %}

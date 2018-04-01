@@ -1,0 +1,459 @@
+#################################
+###       DEFAULT             ###
+#################################
+##VIEWS
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.day
+      - group.weather
+      - group.house_media
+      - updater.updater
+      - binary_sensor.sam_home
+      - binary_sensor.james_home
+      - group.all_automations
+      
+  day:
+    view: no
+    name: Current Overview
+    entities:
+      - sun.sun
+      - sensor.air_pollution
+      - sensor.bom_rain_today
+      
+  weather:
+    view: no
+    name: Weather and Temps
+    entities:
+      - sensor.house_temp_status
+      - sensor.hot_house
+      - sensor.bom_air_temp_c
+      - sensor.bom_feels_like_c
+      - sensor.average_house_temp
+      - sensor.temperature_158d000149c1e6
+      - sensor.temperature_158d0001531a78
+      - sensor.temperature_158d000159c982
+      - sensor.temperature_158d000159c9e8
+      - sensor.temperature_158d00015738ac
+
+  house_media:
+    view: no
+    name: Househould Media
+    entities:
+      - media_player.whole_house    
+  # house:
+    # view: no
+    # name: House Summary
+    # entities:
+      # - sensor.door_bell
+      
+#################################
+###   FAMILY ROOM             ###
+#################################
+##VIEWS
+  family_room:
+    view: yes
+    icon: mdi:home-heart
+    entities:
+      - group.family_info
+      - group.family_media
+      
+  family_info:
+    view: no
+    name: Family Room Information
+    entities:
+      - binary_sensor.presence_family_room
+      - binary_sensor.motion_sensor_158d000113e096
+      - sensor.family_tv_in_use
+      - sensor.temperature_158d0001531a78
+      - sensor.humidity_158d0001531a78
+      - light.family_room_lamp
+      
+  family_media:
+    view: no
+    entities:
+      - media_player.family_room_google_home
+      - media_player.family_room_tv
+      
+
+      
+#################################
+###        BEDROOM            ###
+#################################
+##VIEWS
+  bedroom:
+    view: yes
+    icon: mdi:hotel
+    entities:
+      - group.bed_info
+      - group.bed
+      - group.bedroom_media
+      
+  bed:
+    view: no
+    name: James E Blanket
+    entities:
+      - switch.james_blanket
+      - switch.plug_158d0001291c87
+      - switch.plug_158d00012f2ece
+      - input_boolean.james_phone_charge
+      
+  bed_info:
+    view: no
+    name: Bedroom Information
+    entities:
+      - binary_sensor.presence_bedroom
+      - binary_sensor.in_bed
+      - sensor.bedroom_tv_in_use
+      
+  bedroom_media:
+    view: no
+    entities:
+      - media_player.bedroom_speaker
+    
+      
+#################################
+###         OFFICE            ###
+#################################
+##VIEWS
+  office:
+    view: yes
+    icon: mdi:desktop-classic
+    entities:
+      - group.office_info
+      - group.office_settings
+      - group.office_media
+  
+  Office_info:
+      - binary_sensor.presence_office
+      - binary_sensor.motion_sensor_158d00012304ef
+      - sensor.study_tv_in_use
+      - sensor.temperature_158d000159c982
+      - sensor.humidity_158d000159c982
+      
+  Office_settings:
+    view: no
+    entities:
+      - switch.samespci7
+      - input_boolean.office_alert
+      - switch.plug_158d00012a43c0
+      
+  Office_media:
+    view: no
+    entities:
+      - media_player.office_speaker
+      - script.study_alert
+    
+
+#################################
+###           BAR             ###
+#################################
+##VIEWS
+  bar:
+    view: yes
+    icon: mdi:beer
+    entities:
+      - group.bar_camera
+      - group.bar_info
+
+  bar_info:
+      - binary_sensor.motion_sensor_158d00013f8ab9
+      - binary_sensor.presence_bar
+      - sensor.bar_tv_in_use
+      - sensor.temperature_158d000149c1e6
+      - sensor.humidity_158d000149c1e6
+
+  Bar_camera:
+    view: no
+    entities:
+      - camera.bar_camera
+      
+            
+#################################
+###        TEMPERATURE        ###
+#################################
+# ##VIEWS
+  # Temperature:
+    # view: yes
+    # icon: mdi:temperature-celsius
+    # entities:
+      # - group.day
+      # - group.family_temp
+      # - group.bedroom_temp
+      # - group.study_temp
+      # - group.peppercorn_temp
+# ##ROOMS     
+  # family_temp:
+    # view: no
+    # name: Family Room Temp
+    # entities:
+      # - sensor.temperature_158d0001531a78
+      # - sensor.humidity_158d0001531a78
+      # - sensor.family_room_stats_mean
+      
+  # bedroom_temp:
+    # view: no
+    # name: Main Bedroom Temp
+    # entities:
+      # - sensor.broadlink_sensor_temperature
+
+  # study_temp:
+    # view: no
+    # name: Study Temp
+    # entities:
+      # - sensor.temperature_158d000159c982
+      # - sensor.humidity_158d000159c982
+
+  # peppercorn_temp:
+    # view: no
+    # name: Ellie Temp
+    # entities:
+      # - sensor.temperature_158d000159c9e8
+      # - sensor.humidity_158d000159c9e8
+      # - sensor.ellie_room_stats_mean      
+
+
+#################################
+###           MEDIA           ###
+#################################
+##VIEWS
+  # Media:
+    # view: yes
+    # icon: mdi:television-classic
+    # entities:
+      # - group.media_family
+      # - group.media_bar
+      # - group.media_study
+      # - group.Media_bedroom
+      
+  # media_family:
+    # view: no
+    # name: Family Room Media
+    # entities:
+      # - media_player.family_room_home
+      # - script.tv_on
+      # - script.tv_off
+      # - script.heater_on
+      # - script.heater_off
+      # - script.soundbar_on
+      # - script.soundbar_off
+
+  # media_study:
+    # view: no
+    # name: Study Media
+    # entities:
+      # - media_player.studysound
+      
+  # media_bar:
+    # view: no
+    # name: Bar Media
+    # entities:
+      # - media_player.studysound
+
+  # media_bedroom:
+    # view: no
+    # name: Bedroom Media
+    # entities: 
+ 
+#################################
+###           SAMES           ###
+#################################
+##VIEWS
+  Sames:
+    view: yes
+    icon: mdi:account-multiple
+    entities:
+      - group.james
+      - group.sam
+      
+##GROUPS
+  james:
+    view: no
+    name: James
+    entities:
+      - device_tracker.james_oppo
+      - sensor.game
+      - switch.james_blanket
+      - input_boolean.james_wifi_connected
+      - input_boolean.james_tab_wifi_connected
+      - binary_sensor.james_home
+      - binary_sensor.test_sensor
+      - script.notify_james
+      
+  sam:
+    view: no
+    name: Sam
+    entities:
+      - device_tracker.sammy_mobile
+      - input_boolean.sam_wifi_connected
+      - binary_sensor.sam_home
+
+      
+
+      
+#################################
+###       SECURITY VIEWS      ###
+#################################
+##VIEWS
+  security:
+    view: yes
+    icon: mdi:security-home
+    name: Household Security
+    entities:
+      - group.home_alarm
+      - group.security_states
+      - group.security_detect
+      - group.testing
+      
+  cameras:
+    view: yes
+    icon: mdi:camcorder
+    name: Household Cameras
+    entities:
+      - group.security_arlo1
+      - group.security_arlo2
+      - group.security_cameras
+
+##GROUPS
+
+  home_alarm:
+    view: no
+    name: Home Alarm
+    entities:
+      - alarm_control_panel.sameshd
+      - sensor.security_alert
+      - sensor.motion_alert_trigger
+      - sensor.door_alert_trigger
+      
+
+
+  security_states:
+    view: no
+    name: Security States
+    entities:
+      - switch.away_mode
+      - switch.sleep_mode
+      - switch.plug_158d00012919be
+      - switch.minnie_at_home
+      - switch.arlo_status
+
+  testing:
+    view: no
+    name: Testing Panel
+    entities:
+      - script.motion_detect
+      - automation.sleep_mode_off
+      - input_boolean.notifications
+      - script.notify_james2
+      - script.motion_detected
+      - script.security_away_on
+      
+  security_detect:
+    view: no
+    name: Door Security
+    entities:
+      - binary_sensor.door_window_sensor_158d00012afb39
+      - binary_sensor.door_window_sensor_158d0001193a00
+      - binary_sensor.door_window_sensor_158d00015a952b
+      - binary_sensor.door_window_sensor_158d00015a95a1
+      - binary_sensor.motion_sensor_158d00010f837c
+      - binary_sensor.motion_sensor_158d00011027b1
+      - binary_sensor.motion_sensor_158d000113e096
+      - binary_sensor.motion_sensor_158d00012304ef
+      - binary_sensor.motion_sensor_158d00013f8ab9
+            
+  security_arlo1:
+    view: no
+    name: Back of House
+    entities:
+      - sensor.captured_today_samesback
+      - sensor.last_samesback
+      - camera.samesback
+
+      
+  security_arlo2:
+    view: no
+    name: Front of House
+    entities:
+      - sensor.captured_today_samesfront
+      - sensor.last_samesfront
+      - camera.samesfront
+      
+  # security_cameras:
+    # view: no
+    # name: Meals Room
+    # entities:
+      # - switch.ip_webcam_torch
+      # - switch.ip_webcam_night_vision
+      # - sensor.ip_webcam_battery_voltage
+      # - camera.ip_webcam
+      # - camera.study_cam
+      # - camera.bar_camera
+
+    
+#################################
+###        SYSTEM VIEW        ###
+#################################
+
+  System:
+    view: yes
+    icon: mdi:atom
+    entities:
+      - group.ha
+      - group.pi
+      - group.power
+      - group.switches
+      - group.network
+      
+  ha:
+    view: no
+    icon: mdi:atom
+    entities:
+      - updater.updater
+      
+  PI:
+    view: no
+    icon: mdi:atom
+    entities:
+      - sensor.cpu_use
+      - sensor.average_load_5m
+      - sensor.memory_use_percent
+      - sensor.disk_use_
+      - sensor.ram_use
+      - sensor.since_last_boot
+      
+  Power:
+    view: no
+    entities:
+      - sensor.bedroom_tv_use
+      - sensor.james_blanket_use
+      - sensor.ellie_plug_use
+      - sensor.bar_tv_use
+      - sensor.hallway_plug_use
+      - sensor.study_tv_use
+      - sensor.family_tv_use
+      - sensor.pool_heater_plug_use
+      - sensor.pool_cleaner_plug_use
+      
+  Switches:
+    view: no
+    entities:
+    - switch.plug_158d00012f2ece
+    - switch.plug_158d0001291c87
+    - switch.plug_158d00012f1f6c
+    - switch.plug_158d00012a4356
+    - switch.plug_158d00012a43c0
+    - switch.plug_158d00012f1f84
+    - switch.plug_158d00012f1f84
+    - switch.plug_158d0001de9b93
+    - switch.plug_158d00012919be
+    - switch.plug_158d0001db1643
+      
+  Graphs:
+    view: no
+    entities:
+      - history_graph.temperature
+      - history_graph.power_graph
+      - history_graph.door_security
+      - history_graph.motion_security

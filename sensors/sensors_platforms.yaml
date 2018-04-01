@@ -1,0 +1,58 @@
+#################################
+###       SENSORS             ###
+#################################
+  - platform: yr
+  
+  - platform: xbox_live
+    api_key: e6948466af0777ab98c3105e0283f92a4dfd0db3
+    xuid:
+      - 2533274823058235
+      
+  # - platform: plex
+    # name: Sames Plex
+    # username: kashman3000@gmail.com
+    # password: nookie1188
+    
+  - platform: bom
+    zone_id: IDV60901
+    wmo_id: 95867
+    monitored_conditions:
+      - name
+      - aifstime_utc
+      - apparent_t
+      - gust_kmh
+      - air_temp
+      - dewpt
+      - press
+      - rain_trace
+      - wind_dir
+      - wind_spd_kmh
+      
+  - platform: steam_online
+    api_key: 3BDB69F4F13B3E9C9C43D4ADA7C8C58B
+    accounts:
+      - 76561197964433327
+
+  - platform: template
+    sensors:
+      game:
+        friendly_name: 'Current Game'
+        value_template: '{{ states.sensor.steam_76561197964433327.attributes.Game }}'
+
+  # - platform: broadlink
+    # host: 192.168.1.10
+    # mac: 'B4:43:0D:EF:95:8F'
+    # monitored_conditions:
+      # - 'temperature'
+
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: memory_free
+      - type: load_5m
+      - type: network_in
+      - type: network_out
+      - type: processor_use
+      - type: since_last_boot

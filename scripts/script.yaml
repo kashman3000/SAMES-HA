@@ -1,0 +1,366 @@
+#################################
+###       SCRIPTSSSSSSSSSS    ###
+#################################
+  timed_peppercorn_night:
+    alias: "Turn on Peppercorn Bedroom"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+           entity_id: script.timer_off
+      - service: light.turn_on
+        data:
+          entity_id: light.peppercorn_light
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.timer_off
+
+  timer_off:
+    alias: "Turn off Peppercorn light after 30 minutes"
+    sequence:
+      - delay:
+          minutes: 12
+      - service: light.turn_off
+        data:
+          entity_id: light.peppercorn_light
+
+  timed_toilet_night:
+    alias: "Turn on Toilet"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+           entity_id: script.timer_toilet_off
+      - service: light.turn_on
+        data:
+          entity_id: light.laundry_1
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.timer_toilet_off
+
+  timer_toilet_off:
+    alias: "Turn off Laundry light after 5 minutes"
+    sequence:
+      - delay:
+          minutes: 5
+      - service: light.turn_off
+        data:
+          entity_id: light.laundry_1
+          
+#################################
+###      SECURITY MOTION      ###
+#################################          
+  motion_detected:
+    alias: "Motion Detected"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+           entity_id: script.motion_timer_off
+      - service: mqtt.publish
+        data:
+          topic: 'security/motion/TRIGGER'
+          payload: 'alert!'
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.motion_timer_off
+      - service: notify.James6P
+        data:
+          message: 'MOTION DETECTED!'
+          title: 'AERT!!'
+
+  motion_timer_off:
+    alias: "Reset motion flag after 2 Mins"
+    sequence:
+      - delay:
+          minutes: 1
+      - service: mqtt.publish
+        data:
+          topic: 'security/motion/TRIGGER'
+          payload: 'Cooldown'
+          qos: 1
+          retain: 1
+      - delay:
+          minutes: 1
+      - service: mqtt.publish
+        data:
+          topic: 'security/motion/TRIGGER'
+          payload: 'No Alerts'
+          qos: 1
+          retain: 1
+          
+#################################
+###       STUDY SCRIPTS       ###
+#################################
+
+### STUDY ENTER         
+  study_enter:
+    alias: "When I enter the study"
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: group.study
+      - service: mqtt.publish
+        data:
+          topic: 'family/samespc/SCREENS'
+          payload: 'screens-on'
+
+### STUDY LEAVE         
+  study_leave:
+    alias: "When the Study is not in use"
+    sequence:
+      - service: light.turn_off
+        data:
+          entity_id: group.study
+      - service: mqtt.publish
+        data:
+          topic: 'family/samespc/SCREENS'
+          payload: 'screens-off'
+          
+### GAME TIME
+  game_dota2:
+    alias: "Let's play some Dota2"
+    sequence:
+      - service: script.turn_on
+        data:
+          entity_id: script.study_enter
+      - delay:
+          seconds: 15
+      - service: mqtt.publish
+        data:
+          topic: 'family/samespc/ACTION'
+          payload: 'dota2'
+          qos: 1
+          retain: 1
+
+
+#################################
+###   SECURITY : SLEEP MODE   ###
+#################################          
+
+### TESt TTS
+
+
+### SLEEP MODE ON         
+  sleep_mode_on:
+    alias: "Shut the house down when we sleep"
+    sequence:
+      - service: light.turn_off
+        data:
+          entity_id: group.study
+      - service: light.turn_off
+        data:
+          entity_id: group.family_room
+      - service: light.turn_off
+        data:
+          entity_id: group.study
+      - service: light.turn_off
+        data:
+          entity_id: group.front
+      - service: switch.turn_on
+        data:
+          entity_id: switch.arlo_status
+      - service: notify.James6P
+        data:
+          message: 'Sleep Mode ARMED'
+          title: 'ARMED'
+      # - service: mqtt.publish
+        # data:
+          # topic: 'family/samespc/SCREENS'
+          # payload: 'screens-off'
+      # - service: broadlink.send_packet_192_168_0_26
+        # data:
+          # packet: 
+            # - "JgBQAg8NDQ8NDw0PDg4PAANSbzkOKw8ODhAODg8qDhAODg8ODw4OKw8ODysNKw8ODysMLQ4rDSwOKg4QDw4OKg4QDg8PDg4PDg8PDg8ODg8NEA8ODyoNEA8qDg8NEA8ODyoOKw8ODw4NEA8ODw4PDg0QDg8PDg4PDRAPDg8ODRAPDg8ODyoNLA8rDBAPKg8ODSwPKg4ABIpvOg4qDRAPDg8ODyoODw8ODg8NEA4rDw4NLA8qDRANLA8qDisPKg0sDg8PDg0sDg8PDg8PDBAPDg8ODw8NDw8ODw4PDw4qDw8ODwwRDg4PKw0QDQ8PDg4QDRAODg8PDRAMEQ4ODw4OEA8ODg4PDw0QDRAODg4QDSwODw4rDRAPKg4ODgAEi3A5DisOEAwRDw8OLA8PDxAMEA0QDywNDw4rDS0ODg4rDS0OKg8sDioOEQ8PDiwNEQ4PDhAPDw4PDREPDw4QDhANEA4QDw8NEA4QDw8NEA4QDw8NLAwRDw8NLAwRDw8OKwwRDw8NEA0RDiwNEQ8rDREPDw0QDw8PDw8PDBEOEA8PDBEPKw8rDisOLA4PDSwNEQ8qDxAODw8PDRENEA8PDREPDg8PDhAPDg8PDREODw8PDREPDg8sDSwODw0RDw8OEA4QDBEOEA4QDBEOEA4sDiwOEA8PDhANEA8PDhANEA8PDhANEA8PDhANEA8PDhANEA8PDw8NEA8PDhANEA8PDysOLA4QDxAMEQ0QDxANEA0QDxANEA0QDxANEA0QDxANEA0QDxANEA4PDywNKw8QDSwPDg0ADQUOKw4QDBEPDw=="
+      # - service: notify.James6P
+        # data:
+          # message: 'Family Heater On'
+          # title: 'On'
+
+          
+### SLEEP MODE OFF          
+  sleep_mode_off:
+    alias: "Wake the house up in the morning"
+    sequence:
+      - service: switch.turn_off
+        data:
+          entity_id: switch.arlo_status
+      - service: switch.turn_off
+        data:
+          entity_id: switch.james_blanket
+      - service: switch.turn_off
+        data:
+          entity_id: switch.dyson
+      - service: notify.James6P
+        data:
+          message: 'Sleep Mode DISARMED'
+          title: 'DISARMED'
+      # - service: broadlink.send_packet_192_168_0_26
+        # data:
+          # packet: 
+            # - "JgBQAg4NDQ8NDw0PDg4PAANScDkNKw8ODhANEA4qDhANEA4ODw8NLA4ODyoOLA4ODysNLA4rDisOKw0QDw4PKg0QDw4PDg4PDg8PDg8PDQ8NEA4PDyoNEA4rDg8NEA4PDysOKg4PDw8NDw0QDw4PDwwQDg8PDg8PDBAPDg8ODhAMEA8ODiwOKg8qDhANKw8ODiwMKw8ABIlwOg4rDRAPDg8ODisODw8ODw8MEA4rDg8NLA4rDw8MLA8rDioPKg4rDg8PDg4sDQ8OEA0QDBEODg8ODhANEA4ODw8NEA4rDg8ODw0QDg4PKw0QDg8ODg4QDg8ODw4PDRANEA8ODg8ODw8ODw4ODw0QDg8PDg4PDSwODw4rDg8PKg4PDAAEjXE5DisPEA0QDw8NLQ4ODw8NEQ8ODywNEA8sDSwPDg4sDioOLQ4rDiwNEA0QDiwODwwRDhAPDw0QDhAPDw0QDhAPDw0QDhAPDw0QDhAPDw4PDREPDw4PDREPKw8PDBEPKw0RDw8PDwwRDysPDw8rDhEODw8PDhANEA4PDxAODw0QDxAOKw8sDSwOLA0QDywNEA8sDREODw4QDREODw4QDREPDg4QDhAODw0RDhANEA4QDhAODw0tDSwPDg0RDw8ODw0RDhAODw0RDw8NEQwtDisPDw8PDRAPDw8PDRAOEA8PDg8NEQ8PDg8NEQwRDw8OEAwRDw8NEQwRDxAMEgsRDysNLQ8PDhAPDw0QDhEODw4PDhELEQ8QDRELEQ4RDREMEA8QDS0NLA4tDg8OLQ0QDywODw0ADQUOKw8QDRAPDw=="
+      # - service: notify.James6P
+        # data:
+          # message: 'Family Heater Off'
+          # title: 'Off'
+
+
+#################################
+###   SECURITY : AWAY MODE    ###
+#################################
+
+### AWAY MODE ON
+
+  security_away_on:
+    alias: "Secure the house when we are away"
+    sequence:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.arlo_status
+      - service: switch.turn_on
+        data:
+          entity_id: switch.plug_158d00012919be
+      - service: notify.James6P
+        data:
+          message: 'Away Mode ARMED'
+          title: 'ARMED'
+          
+### AWAY MODE OFF
+  security_away_off:
+    alias: "Turn off security when we return home"
+    sequence:
+      - service: switch.turn_off
+        data:
+          entity_id: switch.arlo_status
+      - service: switch.turn_off
+        data:
+          entity_id: switch.plug_158d00012919be
+      - service: notify.James6P
+        data:
+          message: 'Away Mode DISARMED'
+          title: 'DISARMED'
+          
+
+          
+#################################
+###       SECURITY : ARLO     ###
+################################# 
+  arlo_armed:
+    alias: "Arm Arlo Security Only"
+    sequence:
+      - service: ifttt.trigger
+        data: {"event":"arm"}
+      - service: notify.James6P
+        data:
+          message: 'Arlo ARMED'
+          title: 'ARMED'
+      - service: mqtt.publish
+        data:
+          topic: 'security/arlo/STATUS'
+          payload: 'on'
+
+  arlo_disarmed:
+    alias: "Disarm Arlo Security Only"
+    sequence:
+      - service: ifttt.trigger
+        data: {"event":"disarm"}
+      - service: notify.James6P
+        data:
+          message: 'Arlo DISARMED'
+          title: 'DISARMED'
+      - service: mqtt.publish
+        data:
+          topic: 'security/arlo/STATUS'
+          payload: 'off'
+
+  arlo_alert_night:
+    alias: "Arlo Issue Detected"
+    sequence:
+      - service: notify.James6P
+        data:
+          message: 'Arlo has detected an issue'
+          title: 'ISSUE ALERT'
+      - service: scene.turn_on
+        data:
+          entiy_id: scene.alarm_night
+          
+#################################
+###     GOOGLE HOME ALERTS    ###
+################################# 
+
+  fart_noise:
+    alias: "Play a silly fart noise"
+    sequence:
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.family_room_google_home
+          volume_level: 0.872727
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.family_room_google_home
+          media_content_id: "http://sames-ha.duckdns.org:8123/local/fart.mp3"
+          media_content_type: MUSIC
+      - delay:
+          seconds: 10
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.family_room_google_home
+          volume_level: 0.554545
+          
+  fart_noise2:
+    alias: "Play a silly fart noise"
+    sequence:
+      - delay:
+          seconds: 5
+      - service: shell_command.play_fart
+      - delay:
+          seconds: 5
+
+#################################
+###     TEMP  SCRIPTSSSSSS    ###
+#################################
+  dyson_on:
+    alias: "Dyson On"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "JgBYAEcZGC8YMRcZGDAZFxcZFxkYGhkYGBsYGBkYGRgXMRkZFwAM+0kXGS8YMRcZGDAZFxcZFxkYGhkZFxsZGBkXGRgXMRkZFwAGa0gXFzEYAAZ5RxkXMBoADQU="
+      - service: notify.James6P
+        data:
+          message: 'DYSON On'
+          title: 'On'
+            
+  dyson_off:
+    alias: "Dyson Off"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "JgBIAEYZFzEZLxcZGDEXGRkXGBcaGRcaGBsYGBkYGBkZFxgaGAAM70kYGC8aLxgYGDEYFxkXGBgaGRgZGBoZGBgZGBgZGBgaFwANBQ=="
+      - service: notify.James6P
+        data:
+          message: 'DYSON Off'
+          title: 'Off'
+
+#################################
+###     Light / Fan SCRIPTS   ###
+#################################            
+  bedroom_light_on:
+    alias: "Light On"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "sisuAAwNGA0YDhgZDBoMGgwaDA4YDhgNGA4YDhgNGBkMDhgNGA0YDRgNGBkMGQwAAXcAAAAAAAAAAAAA"
+            
+  bedroom_light_off:
+    alias: "Light Off"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "sicuAAwOGA4YDRgZDBoLGgsaDA4XDhcNGA0YDhcNGA4YDhcOFw4XGgwaDBoMGQwAAXgAAAAAAAAAAAAA"

@@ -1,0 +1,3 @@
+  play_fart: omxplayer /home/homeassistant/.homeassistant/www/fart.mp3
+  
+  sames_pc_hibernate: curl http://192.168.87.31:8090/?Hibernate

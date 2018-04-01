@@ -1,0 +1,68 @@
+#################################
+###     SECURITY  SENSORS     ###
+#################################
+  - platform: template
+    sensors:
+      peppercorn_motion_since:
+        friendly_name: 'Peppercorn Motion Since'
+        value_template: '{{ states.binary_sensor.motion_sensor_158d00011027b1.attributes["No motion since"] }}'
+        
+  - platform: template
+    sensors:
+      laundry_motion_since:
+        friendly_name: 'Laundry Motion Since'
+        value_template: '{{ states.binary_sensor.motion_sensor_158d00010f837c.attributes["No motion since"] }}'
+        
+  - platform : mqtt
+    name: "Security Alert"
+    state_topic: "security/motion/TRIGGER"
+    
+  - platform : mqtt
+    name: "Door Bell"
+    state_topic: "family/rooms/front/bell"
+
+# Arlo Cameras
+  - platform: arlo
+    monitored_conditions:
+      - captured_today
+      - last_capture
+      - total_cameras
+      - signal_strength
+
+## Any Motion / Door sets state to ON    
+  - platform: template
+    sensors:
+      motion_alert_trigger:
+        friendly_name: 'Household Motion Trigger'
+        value_template: >-
+            {%- if is_state("binary_sensor.motion_sensor_158d00010f837c", "on") %}
+                on
+            {%- elif is_state("binary_sensor.motion_sensor_158d00011027b1", "on") %}
+                on
+            {%- elif is_state("binary_sensor.motion_sensor_158d000113e096", "on") %}
+                on
+            {%- elif is_state("binary_sensor.motion_sensor_158d00012304ef", "on") %}
+                on
+            {%- elif is_state("binary_sensor.motion_sensor_158d00013f8ab9", "on") %}
+                on                 
+            {% else %}
+                off
+            {%- endif %}
+
+  - platform: template
+    sensors:
+      door_alert_trigger:
+        friendly_name: 'Open Door Trigger'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_window_sensor_158d00012afb39", "on") %}
+                on
+            {%- elif is_state("binary_sensor.door_window_sensor_158d0001193a00", "on") %}
+                on
+            {%- elif is_state("binary_sensor.door_window_sensor_158d00015a952b", "on") %}
+                on
+            {%- elif is_state("binary_sensor.door_window_sensor_158d00015a95a1", "on") %}
+                on              
+            {% else %}
+                off
+            {%- endif %}
+            

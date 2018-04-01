@@ -1,0 +1,123 @@
+  - platform: 'bayesian'
+    name: 'in_bed'
+    prior: 0.2
+    probability_threshold: 0.90
+    observations:
+      - entity_id: 'binary_sensor.motion_sensor_158d00010f837c'
+        prob_given_true: 0.6
+        platform: 'state'
+        to_state: 'off'
+      - entity_id: 'binary_sensor.motion_sensor_158d00011027b1'
+        prob_given_true: 0.6
+        platform: 'state'
+        to_state: 'off'
+      - entity_id: 'binary_sensor.motion_sensor_158d000113e09'
+        prob_given_true: 0.6
+        platform: 'state'
+        to_state: 'off'
+      - entity_id: 'switch.plug_158d0001291c87'
+        prob_given_true: 0.65
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'sensor.sun'
+        prob_given_true: 0.8
+        platform: 'state'
+        to_state: 'below_horizon'
+      - entity_id: 'switch.samespci7'
+        prob_given_true: 0.7
+        platform: 'state'
+        to_state: 'off'
+      - entity_id: 'switch.sleep_mode'
+        prob_given_true: 0.85
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'input_boolean.james_phone_charge'
+        prob_given_true: 0.85
+        platform: 'state'
+        to_state: 'on'
+        
+### JAMES   
+  - platform: 'bayesian'
+    name: 'James Home'
+    prior: 0.5
+    probability_threshold: 0.90
+    observations:
+      - entity_id: 'input_boolean.james_wifi_connected'
+        prob_given_true: 0.95
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'input_boolean.james_tab_wifi_connected'
+        prob_given_true: 0.6
+        platform: 'state'
+        to_state: 'on'
+        
+### SAM 
+  - platform: 'bayesian'
+    name: 'Sam Home'
+    prior: 0.5
+    probability_threshold: 0.75
+    observations:
+      - entity_id: 'input_boolean.sam_wifi_connected'
+        prob_given_true: 0.95
+        platform: 'state'
+        to_state: 'on'
+        
+####################################
+###    ROOM PRESENCE SENSORS     ###
+####################################
+     
+  - platform: 'bayesian'
+    name: 'presence_family_room'
+    prior: 0.5
+    probability_threshold: 0.8
+    observations:
+      - entity_id: 'binary_sensor.motion_sensor_158d000113e096'
+        prob_given_true: 0.85
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'media_player.family_room_tv'
+        prob_given_true: 0.85
+        platform: 'state'
+        to_state: 'on'
+
+  - platform: 'bayesian'
+    name: 'presence_office'
+    prior: 0.5
+    probability_threshold: 0.9
+    observations:
+      - entity_id: 'binary_sensor.motion_sensor_158d00012304ef'
+        prob_given_true: 0.95
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'sensor.steam_76561197964433327'
+        prob_given_true: 0.75
+        platform: 'state'
+        to_state: 'online'
+      - entity_id: 'switch.samespci7'
+        prob_given_true: 0.75
+        platform: 'state'
+        to_state: 'on'
+        
+  - platform: 'bayesian'
+    name: 'presence_bedroom'
+    prior: 0.5
+    probability_threshold: 0.9
+    observations:
+      - entity_id: 'input_boolean.james_phone_charge'
+        prob_given_true: 0.9
+        platform: 'state'
+        to_state: 'on'
+      - entity_id: 'sun.sun'
+        prob_given_true: 0.6
+        platform: 'state'
+        to_state: 'below_horizon'
+        
+  - platform: 'bayesian'
+    name: 'presence_bar'
+    prior: 0.5
+    probability_threshold: 0.9
+    observations:
+      - entity_id: 'binary_sensor.motion_sensor_158d00013f8ab9'
+        prob_given_true: 0.9
+        platform: 'state'
+        to_state: 'on'
