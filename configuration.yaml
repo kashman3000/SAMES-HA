@@ -91,9 +91,9 @@ tts:
     cache_dir: /tmp/tts
     time_memory: 300
 
-duckdns:
-  domain: !secret duckdns_user
-  access_token: !secret duckdns_tok
+#duckdns:
+ # domain: !secret duckdns_user
+  #access_token: !secret duckdns_tok
  
 light:
   - platform: yeelight
