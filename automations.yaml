@@ -369,10 +369,6 @@
      entity_id: binary_sensor.sam_home
      from: 'off'
      to: 'on'
-   # condition:
-     # condition: state
-     # entity_id: device_tracker.sammy_mobile
-     # state: 'home'
    action:
      service: notify.James6P
      data:
@@ -380,7 +376,7 @@
        title: 'SAM HOME'
      
  - id: auto265
-   alias: "Alert James when Sam Laves Home"
+   alias: "Alert James when Sam Leaves Home"
    trigger:
      platform: state
      entity_id: binary_sensor.sam_home
@@ -391,65 +387,40 @@
      data:
        message: 'Sam is leaving home'
        title: 'SAM LEFT HOME'
-     
- - id: auto28
-   alias: "Alert James when James Comes Home"
-   trigger:
-     platform: state
-     entity_id: binary_sensor.james_home
-     from: 'off'
-     to: 'on'
-   # condition:
-     # condition: state
-     # entity_id: device_tracker.james_oppo
-     # state: 'home'
-   action:
-     service: notify.James6P
-     data:
-       message: 'James is arriving home'
-       title: 'JAMES HOME'
-     
- - id: auto265
-   alias: "Alert James when James Leaves Home"
-   trigger:
-     platform: state
-     entity_id: binary_sensor.james_home
-     from: 'on  '
-     to: 'off'
-   action:
-     service: notify.James6P
-     data:
-       message: 'James is leaving home'
-       title: 'JAMES LEFT HOME'
-          
-     
-    
 
      
 #################################
 ###      BOTH AUTOMATION      ###
 #################################     
- # - id: auto30
-   # alias: 'Set Away Mode On when we leave'
-   # trigger:
-     # platform: state
-     # entity_id: group.all_devices
-     # from: 'home'
-     # to: 'not_home'
-   # action:
-     # service: switch.turn_on
-     # entity_id: switch.away_mode
+ - id: auto30
+   alias: 'Set Away Mode ON when we are away'
+   trigger:
+     - platform: state
+       entity_id: binary_sensor.james_home
+       from: 'on'
+       to: 'off'
+     - platform: state
+       entity_id: binary_sensor.sam_home
+       from: 'on'
+       to: 'off'
+   action:
+    service: switch.turn_off
+    entity_id: switch.away_mode
      
- # - id: auto31
-   # alias: 'Set Away Mode OFF when we are home'
-   # trigger:
-     # platform: state
-     # entity_id: group.all_devices
-     # from: 'not_home'
-     # to: 'home'
-   # action:
-     # service: switch.turn_off
-     # entity_id: switch.away_mode
+ - id: auto31
+   alias: 'Set Away Mode OFF when we are home'
+   trigger:
+     - platform: state
+       entity_id: binary_sensor.james_home
+       from: 'off'
+       to: 'on'
+     - platform: state
+       entity_id: binary_sensor.sam_home
+       from: 'off'
+       to: 'on'
+   action:
+    service: switch.turn_off
+    entity_id: switch.away_mode
      
 #################################
 ###  SECURITY : AWAY MODE     ###
@@ -588,74 +559,28 @@
        
 
 #################################
-###   STUDY AUTOMATION        ###
-#################################
- # - id: auto44
-   # alias: "Game Dota 2 Starts"
-   # trigger:
-     # platform: state
-     # entity_id: sensor.game
-     # to: 'Dota 2'
-   # action:
-     # service: scene.turn_on
-     # entity_id: scene.study_game
-     
- # - id: auto45
-   # alias: "Game Dota 2 Stops"
-   # trigger:
-     # platform: state
-     # entity_id: sensor.game
-     # from: 'Dota 2'
-     # to: 'None'
-   # action:
-     # service: scene.turn_on
-     # entity_id: scene.study_normal
-     
- # - id: auto58
-   # alias: "Study Enter"
-   # trigger:
-     # platform: state
-     # entity_id: light.study_light
-     # from: 'off'
-     # to: 'on'
-   # action:
-     # service: script.turn_on
-     # entity_id: script.study_enter
-     
- # - id: auto59
-   # alias: "Study Leave"
-   # trigger:
-     # platform: state
-     # entity_id: light.study_light
-     # from: 'on'
-     # to: 'off'
-   # action:
-     # service: script.turn_on
-     # entity_id: script.study_leave
-           
-#################################
 ###       STUDY BUTTONS       ###
 #################################
 
- - id: auto48
-   alias: "Hot Study"
-   trigger:
-     platform: numeric_state
-     entity_id: sensor.temperature_158d000159c982
-     above: 27
-   condition:
-     condition: and
-     conditions:
-       - condition: time
-         after: '7:00:00'
-         before: '21:00:00'
-       - condition: state
-         entity_id: device_tracker.jameskj
-         state: 'not_home'
-   action:
-    - service: notify.James6P
-      data:
-        message: 'Study: HOT'
-        title: 'HOT'
+ # - id: auto48
+   # alias: "Hot Study"
+   # trigger:
+     # platform: numeric_state
+     # entity_id: sensor.temperature_158d000159c982
+     # above: 27
+   # condition:
+     # condition: and
+     # conditions:
+       # - condition: time
+         # after: '7:00:00'
+         # before: '21:00:00'
+       # - condition: state
+         # entity_id: device_tracker.jameskj
+         # state: 'not_home'
+   # action:
+    # - service: notify.James6P
+      # data:
+        # message: 'Study: HOT'
+        # title: 'HOT'
         
  

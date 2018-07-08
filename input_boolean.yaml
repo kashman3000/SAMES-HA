@@ -4,7 +4,7 @@
     icon: mdi:eye
     
   james_phone_charge:
-    name: James Mobile Charing
+    name: James Mobile Charging
     initial: off
     icon: mdi:battery-charging
     
@@ -26,4 +26,14 @@
   notifications:
     name: Notifications
     initial: on
+    icon: mdi:bell-ring
+
+  morning_first:
+    name: Morning Greeting
+    initial: off
+    icon: mdi:bell-ring
+    
+  welcome_home:
+    name: Welcome Greeting
+    initial: off
     icon: mdi:bell-ring

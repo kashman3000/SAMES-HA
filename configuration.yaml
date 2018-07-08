@@ -24,14 +24,16 @@ frontend:
 
 config:
 
-map:
+#map:
 
 http:
   # Uncomment this to add a password (recommended!)
    api_password: !secret http_password
   # Uncomment this if you are using SSL or running in Docker etc
-   base_url: 192.168.87.15:8123
-
+   base_url: 192.168.87.15:812
+   cors_allowed_origins:
+    - http://192.168.87.15:7080
+    
 # Checks for available updates
 updater:
 
@@ -61,28 +63,28 @@ xiaomi_aqara:
    - mac:
      key: !secret xiaomi_key
   
-mqtt:
-  broker: 127.0.0.1
-  port: 1883
-  client_id: home-assistant-1
-  username: !secret mqtt_user
-  password: !secret mqtt_pass
+# mqtt:
+  # broker: 127.0.0.1
+  # port: 1883
+  # client_id: home-assistant-1
+  # username: !secret mqtt_user
+  # password: !secret mqtt_pass
   
-# Google Cast
-media_player:
-# ChromeCast Main TV
-  - platform: cast
-    host: 192.168.87.34
-# ChromeCast Bedroom
-  - platform: cast
-    host: 192.168.1.12
-# Google Home    
-  - platform: cast
-    host: 192.168.1.10
+## Google Cast
+#media_player:
+## ChromeCast Main TV
+#  - platform: cast
+#    host: 192.168.87.34
+## ChromeCast Bedroom
+#  - platform: cast
+#    host: 192.168.1.12
+## Google Home    
+#  - platform: cast
+#    host: 192.168.1.10
     
-# Chromecast Audio Whole House    
-  - platform: cast
-    host: 192.168.1.5
+## Chromecast Audio Whole House    
+#  - platform: cast
+#    host: 192.168.1.5
   
 # Text to speech
 tts:
@@ -102,6 +104,10 @@ light:
         name: Family Room Lamp
         transition: 1000
         use_music_mode: True
+  - platform: flux_led
+    devices:
+      192.168.87.243:
+        name: led_strip
 
   
 #CAMERAS  
@@ -130,8 +136,8 @@ arlo:
   username: !secret arlo_user
   password: !secret arlo_pass
 
-alarm_control_panel:
-  - platform: arlo
+# alarm_control_panel:
+  # - platform: arlo
   
 camera:
   - platform: arlo
@@ -155,18 +161,21 @@ ffmpeg:
 ifttt:
   key: !secret ifttt_key
 
-device_tracker:
-  - platform: owntracks_http
+# device_tracker:
+  # - platform: owntracks_http
   
     
 #WOL
 wake_on_lan:
 
-DYSON
- dyson:
-    username: !secret dyson_user
-    password: !secret dyson_pass
-    language: AU
+#DYSON
+dyson:
+  username: !secret dyson_user
+  password: !secret dyson_pass
+  language: AU
+  devices:
+    - device_id: PT7-AU-HKA3629A
+      device_ip: 192.168.87.127
 
  
 # JOIN

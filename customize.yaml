@@ -84,7 +84,7 @@
     friendly_name: James E Blanket
     icon: mdi:power-plug
   switch.plug_158d00012919be:
-    friendly_name: Ellie Monitor
+    friendly_name: Coffee machine
     icon: mdi:power-plug
   switch.plug_158d00012a4356:
     friendly_name: Hallway Plug
