@@ -13,14 +13,6 @@
         friendly_name: 'Laundry Motion Since'
         value_template: '{{ states.binary_sensor.motion_sensor_158d00010f837c.attributes["No motion since"] }}'
         
-  - platform : mqtt
-    name: "Security Alert"
-    state_topic: "security/motion/TRIGGER"
-    
-  - platform : mqtt
-    name: "Door Bell"
-    state_topic: "family/rooms/front/bell"
-
 # Arlo Cameras
   - platform: arlo
     monitored_conditions:

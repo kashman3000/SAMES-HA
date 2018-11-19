@@ -7,31 +7,9 @@
 ###       JAMES SENSORS       ###
 #################################
 
-  - platform: mqtt
-    state_topic: "family/james/LOCATION"
-    name: "James Location"
-    
-#  - platform: mqtt
-#   state_topic: "family/james/POWER"
-#    name: "James Power"
-    
-#  - platform: mqtt
-#    state_topic: "family/james/BATTERY"
-#    name: "James Battery"
-    
-#  - platform: mqtt
-#    state_topic: "family/james/CALL"
-#    name: "James Call"
-    
-#  - platform: mqtt
-#    state_topic: "family/james/SCREEN"
-#    name: "James Screen"
 
 
 #################################
 ###         SAM SENSORS       ###
 #################################
 
-  - platform: mqtt
-    state_topic: "family/sam/LOCATION"
-    name: "Sam Location"
