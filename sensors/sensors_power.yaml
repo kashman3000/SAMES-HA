@@ -1,0 +1,125 @@
+- platform: template
+  sensors:
+  
+  #POWER PLUG USAGE
+    bedroom_tv_use:
+      entity_id: switch.plug_158d00012f2ece
+      friendly_name: 'Bedroom TV'
+      value_template: '{{ states.switch.plug_158d00012f2ece.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+      
+    james_blanket_use:
+      entity_id: switch.plug_158d0001291c87
+      friendly_name: 'James Blanket'
+      value_template: '{{ states.switch.plug_158d0001291c87.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+      
+    bar_tv_use:
+      entity_id: switch.plug_158d00012f1f6c
+      friendly_name: 'Bar TV'
+      value_template: '{{ states.switch.plug_158d00012f1f6c.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+      
+    hallway_plug_use:
+      entity_id: switch.plug_158d00012a4356
+      friendly_name: 'Hallway'
+      value_template: '{{ states.switch.plug_158d00012a4356.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+
+    study_tv_use:
+      entity_id: switch.plug_158d00012a43c0
+      friendly_name: 'Office TV'
+      value_template: '{{ states.switch.plug_158d00012a43c0.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+      
+    family_tv_use:
+      entity_id: switch.plug_158d00012f1f84
+      friendly_name: 'Family Room TV'
+      value_template: '{{ states.switch.plug_158d00012f1f84.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+      
+    ellie_plug_use:
+      entity_id: switch.plug_158d00012919be
+      friendly_name: 'Ellies Room'
+      value_template: '{{ states.switch.plug_158d00012919be.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+
+    pool_heater_plug_use:
+      entity_id: switch.plug_158d0001de9b93
+      friendly_name: 'Pool Heater'
+      value_template: '{{ states.switch.plug_158d0001de9b93.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+      
+    pool_cleaner_plug_use:
+      entity_id: switch.plug_158d0001db1643
+      friendly_name: 'Pool Cleaner'
+      value_template: '{{ states.switch.plug_158d0001db1643.attributes["load_power"] }}'
+      icon_template: mdi:power-plug
+      unit_of_measurement: "W"
+      
+  #POWER PLUG IN-USE
+    bedroom_tv_in_use:
+      entity_id: switch.plug_158d00012f2ece
+      friendly_name: 'Bedroom TV'
+      value_template: '{{ states.switch.plug_158d00012f2ece.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+      
+    james_blanket_in_use:
+      entity_id: switch.plug_158d0001291c87
+      friendly_name: 'James Blanket'
+      value_template: '{{ states.switch.plug_158d0001291c87.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+      
+    bar_tv_in_use:
+      entity_id: switch.plug_158d00012f1f6c
+      friendly_name: 'Bar TV'
+      value_template: '{{ states.switch.plug_158d00012f1f6c.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+      
+    hallway_plug_in_use:
+      entity_id: switch.plug_158d00012a4356
+      friendly_name: 'Hallway'
+      value_template: '{{ states.switch.plug_158d00012a4356.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+
+    study_tv_in_use:
+      entity_id: switch.plug_158d00012a43c0
+      friendly_name: 'Office TV'
+      value_template: '{{ states.switch.plug_158d00012a43c0.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+
+      
+    family_tv_in_use:
+      entity_id: switch.plug_158d00012f1f84
+      friendly_name: 'Family Room TV'
+      value_template: '{{ states.switch.plug_158d00012f1f84.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+
+      
+    ellie_plug_in_use:
+      entity_id: switch.plug_158d00012919be
+      friendly_name: 'Ellies Room'
+      value_template: '{{ states.switch.plug_158d00012919be.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+
+
+    pool_heater_plug_in_use:
+      entity_id: switch.plug_158d0001de9b93
+      friendly_name: 'Pool Heater'
+      value_template: '{{ states.switch.plug_158d0001de9b93.attributes["in_use"] }}'
+      icon_template: mdi:power-plug
+
+      
+    pool_cleaner_plug_in_use:
+      entity_id: switch.plug_158d0001db1643
+      friendly_name: 'Pool Cleaner'
+      value_template: '{{ states.switch.plug_158d0001db1643.attributes["in_use"] }}'
+      icon_template: mdi:power-plug

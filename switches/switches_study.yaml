@@ -1,0 +1,16 @@
+  # - platform: mqtt
+    # name: "Study Light"
+    # state_topic: "rooms/study/light/switch1"
+    # command_topic: "rooms/study/light/switch1"
+    # payload_on: "on"
+    # payload_off: "off"
+    # optimistic: false
+    # retain: true
+    # qos: 1
+    
+  - platform: wake_on_lan
+    mac_address: "6C-F0-49-E0-0D-DF"
+    name: "SAMESPCi7"
+    host: 192.168.87.31
+    turn_off:
+      service: shell_command.sames_pc_hibernate

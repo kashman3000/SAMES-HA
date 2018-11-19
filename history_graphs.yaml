@@ -1,0 +1,41 @@
+  gr1:
+    name: Power Graph
+    entities:
+      - sensor.bedroom_tv_use
+      - sensor.james_blanket_use
+      - sensor.ellie_plug_use
+      - sensor.bar_tv_use
+      - sensor.hallway_plug_use
+      - sensor.study_tv_use
+      - sensor.family_tv_use
+    hours_to_show: 96
+    refresh: 60
+  gr2:
+    name: Temperature
+    entities:
+      - sensor.bom_air_temp
+      - sensor.temperature_158d000149c1e6
+      - sensor.temperature_158d0001531a78
+      - sensor.temperature_158d000159c982
+      - sensor.broadlink_sensor_temperature
+    hours_to_show: 96
+    refresh: 300
+  gr3:
+    name: Door Security
+    entities:
+      - binary_sensor.door_window_sensor_158d00012afb39
+      - binary_sensor.door_window_sensor_158d0001193a00
+      - binary_sensor.door_window_sensor_158d00015a952b
+      - binary_sensor.door_window_sensor_158d00015a95a1
+    hours_to_show: 96
+    refresh: 15
+  g4:
+    name: Motion Security
+    entities:
+      - binary_sensor.motion_sensor_158d00010f837c
+      - binary_sensor.motion_sensor_158d00011027b1
+      - binary_sensor.motion_sensor_158d000113e096
+      - binary_sensor.motion_sensor_158d00012304ef
+      - binary_sensor.motion_sensor_158d00013f8ab9
+    hours_to_show: 96
+    refresh: 15

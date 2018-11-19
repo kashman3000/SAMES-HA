@@ -1,0 +1,37 @@
+#################################
+###     TEMP  SCRIPTSSSSSS    ###
+#################################
+  dyson_on:
+    alias: "Dyson On"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "JgBYAEcZGC8YMRcZGDAZFxcZFxkYGhkYGBsYGBkYGRgXMRkZFwAM+0kXGS8YMRcZGDAZFxcZFxkYGhkZFxsZGBkXGRgXMRkZFwAGa0gXFzEYAAZ5RxkXMBoADQU="
+            
+  dyson_off:
+    alias: "Dyson Off"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "JgBIAEYZFzEZLxcZGDEXGRkXGBcaGRcaGBsYGBkYGBkZFxgaGAAM70kYGC8aLxgYGDEYFxkXGBgaGRgZGBoZGBgZGBgZGBgaFwANBQ=="
+
+#################################
+###     Light / Fan SCRIPTS   ###
+#################################            
+  bedroom_light_on:
+    alias: "Light On"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "sisuAAwNGA0YDhgZDBoMGgwaDA4YDhgNGA4YDhgNGBkMDhgNGA0YDRgNGBkMGQwAAXcAAAAAAAAAAAAA"
+            
+  bedroom_light_off:
+    alias: "Light Off"
+    sequence:
+      - service: broadlink.send_packet_192_168_0_21
+        data:
+          packet: 
+            - "sicuAAwOGA4YDRgZDBoLGgsaDA4XDhcNGA0YDhcNGA4YDhcOFw4XGgwaDBoMGQwAAXgAAAAAAAAAAAAA"

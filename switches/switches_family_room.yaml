@@ -1,0 +1,9 @@
+  # #Broadlink IR
+  # - platform: broadlink
+    # host: 192.168.1.8
+    # mac: '34:EA:34:E3:B4:21'
+    # switches:
+      # reciever:
+        # command_on: 'JgBYAEcZGC8YMRcZGDAZFxcZFxkYGhkYGBsYGBkYGRgXMRkZFwAM+0kXGS8YMRcZGDAZFxcZFxkYGhkZFxsZGBkXGRgXMRkZFwAGa0gXFzEYAAZ5RxkXMBoADQU='
+        # command_off: 'JgBIAEYZFzEZLxcZGDEXGRkXGBcaGRcaGBsYGBkYGBkZFxgaGAAM70kYGC8aLxgYGDEYFxkXGBgaGRgZGBoZGBgZGBgZGBgaFwANBQ=='
+        # friendly_name: Family Room IR

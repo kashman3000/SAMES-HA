@@ -1,0 +1,83 @@
+#  - platform: template
+#    switches:
+#      away_mode:
+#        value_template: >
+#                        {% if states.sensor.away_mode.state == 'off' %}
+#                          off
+#                        {% elif states.sensor.away_mode.state == 'on' %}
+#                          on
+#                        {% else %}
+#                          off
+#                        {% endif %}
+#        turn_on:
+#          service: homeassistant.turn_on
+#          entity_id: script.sleep_mode_on
+#        turn_off:
+#          service: switch.turn_on
+#          entity_id: switch.skylight_close
+
+## EXAMPLE MQTT SWITCH
+
+#  - platform : mqtt
+#    name: "Andrew Ceiling Fan"
+#    state_topic: "stat/sonoff_fan/POWER"
+#    command_topic: "cmnd/sonoff_fan/POWER"
+#    payload_on: "ON"
+#    payload_off: "OFF"
+#    optimistic: false
+#    retain: true
+
+
+## EXAMPLE MQTT SWITCH
+
+  - platform: mqtt
+    name: "Arlo Status"
+    state_topic: "security/arlo/STATUS"
+    command_topic: "security/arlo/STATUS"
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false
+    retain: true
+          
+  - platform: mqtt
+    name: "Sleep Mode"
+    state_topic: "security/night/STATUS"
+    command_topic: "security/night/STATUS"
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false
+    retain: true
+
+  - platform: mqtt
+    name: "Away Mode"
+    state_topic: "security/away/STATUS"
+    command_topic: "security/away/STATUS"
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false
+    retain: true
+    
+  - platform: mqtt
+    name: "Minnie At Home"
+    state_topic: "family/minnie/STATUS"
+    command_topic: "family/minnie/STATUS"
+    payload_on: "on"
+    payload_off: "off"
+    optimistic: false
+    retain: true  
+    
+#  - platform: template
+#    switches:
+#      arlo:
+#        value_template: >
+#                        {% if states.sensor.arlo_state.state == 'off' %}
+#                          off
+#                        {% else %}
+#                          on
+#                        {% endif %}
+#        turn_on:
+#          service: homeassistant.turn_on
+#          entity_id: script.arlo_armed
+#        turn_off:
+#          service: homeassistant.turn_on
+#          entity_id: script.arlo_disarmed

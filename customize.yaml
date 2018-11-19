@@ -1,0 +1,121 @@
+### BUTTONS
+  binary_sensor.switch_158d0001288a6b:
+    friendly_name: Study Switch
+    icon: mdi:power
+  binary_sensor.switch_158d00013ecbc9:
+    friendly_name: Bedroom Switch
+    icon: mdi:power
+  binary_sensor.switch_158d0001870795:
+    friendly_name: Door Bell
+    icon: mdi:bell-ring
+    
+### DOOR SENSORS
+  binary_sensor.door_window_sensor_158d00012afb39:
+    friendly_name: Back Door
+    icon: mdi:glassdoor
+  binary_sensor.door_window_sensor_158d0001193a00:
+    friendly_name: Front Door
+    icon: mdi:glassdoor
+  binary_sensor.door_window_sensor_158d00015a952b:
+    friendly_name: Office Door
+    icon: mdi:glassdoor
+  binary_sensor.door_window_sensor_158d00015a95a1:
+    friendly_name: Bar Door
+    icon: mdi:glassdoor
+    
+    
+### MOTION SENSORS
+  binary_sensor.motion_sensor_158d00010f837c:
+    friendly_name: Laundry Motion
+  binary_sensor.motion_sensor_158d00011027b1:
+    friendly_name: Hallway Motion
+  binary_sensor.motion_sensor_158d000113e096:
+    friendly_name: Family Motion
+  binary_sensor.motion_sensor_158d00012304ef:
+    friendly_name: Office Motion
+  binary_sensor.motion_sensor_158d00013f8ab9:
+    friendly_name: Bar Motion
+  sensor.security_alert:
+    icon: mdi:alert-octagram
+  sensor.motion_alert_trigger:
+    icon: mdi:thumb-up
+  
+    
+### TEMP SENSORS
+  sensor.temperature_158d000159c9e8:
+    friendly_name: Ellie Temperature
+  sensor.humidity_158d000159c9e8:
+    friendly_name: Ellie Humidty
+    icon: mdi:water
+  sensor.temperature_158d000159c982:
+    friendly_name: Study Temperature
+  sensor.humidity_158d000159c982:
+    friendly_name: Study Humidity
+    icon: mdi:water
+  sensor.temperature_158d0001531a78:
+    friendly_name: Family Room Temperature
+  sensor.humidity_158d0001531a78:
+    friendly_name: Family Room Humidity
+    icon: mdi:water
+  sensor.temperature_158d000149c1e6:
+    friendly_name: Bar Temperature
+  sensor.humidity_158d000149c1e6:
+    friendly_name: Bar Humidity
+    icon: mdi:water
+  sensor.temperature_158d00015738ac:
+    friendly_name: Bedroom Temperature
+  sensor.humidity_158d00015738ac:
+    friendly_name: Bedroom Humidity
+    icon: mdi:water
+  sensor.broadlink_sensor_temperature:
+    friendly_name: Bar Temperature (Backup)
+    
+###GENERAL SENSORS
+  sensor.sam_location:
+    icon: mdi:account-location
+  sensor.james_location:
+    icon: mdi:account-location
+  binary_sensor.water_leak_sensor_158d0001d72b3a:
+    friendly_name: Rain Sensor
+    icon: mdi:water
+    
+### POWER PLUGS
+  switch.plug_158d0001291c87:
+    friendly_name: James E Blanket
+    icon: mdi:power-plug
+  switch.plug_158d00012919be:
+    friendly_name: Coffee machine
+    icon: mdi:power-plug
+  switch.plug_158d00012a4356:
+    friendly_name: Hallway Plug
+    icon: mdi:power-plug
+  switch.plug_158d00012f2ece:
+    friendly_name: Bedroom TV
+    icon: mdi:power-plug
+  switch.plug_158d00012a43c0:
+    friendly_name: Office TV
+    icon: mdi:power-plug
+  switch.plug_158d00012f1f6c:
+    friendly_name: Bar TV
+    icon: mdi:power-plug 
+  switch.plug_158d00012f1f84:
+    friendly_name: Family Room TV
+    icon: mdi:power-plug
+  switch.plug_158d0001de9b93:
+    friendly_name: Pool Heater
+    icon: mdi:power-plug
+  switch.plug_158d0001db1643:
+    friendly_name: Pool Filter
+    icon: mdi:power-plug
+ 
+    
+### SWITCHES
+  switch.away_mode:
+    icon: mdi:home-outline
+  switch.sleep_mode:
+    icon: mdi:weather-night
+  switch.fan:
+    icon: mdi:fan
+  switch.arlo_status:
+    icon: mdi:video
+  
