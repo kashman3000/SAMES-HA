@@ -42,3 +42,5 @@ Traceback (most recent call last):
     await action.async_call(
 AttributeError: 'NoneType' object has no attribute 'async_call'
 2018-11-19 17:30:37 ERROR (SyncWorker_19) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.87.56, Family Room Lamp: A socket error occurred when sending the command.
+2018-11-19 17:30:39 ERROR (SyncWorker_3) [homeassistant.components.dyson] Unable to connect to device NetworkDevice(name=Office Hot+Cool,address=192.168.87.127,port=1883): [Errno 113] No route to host
+2018-11-19 17:30:57 ERROR (SyncWorker_21) [homeassistant.components.sensor.xbox_live] Can't setup XboxAPI connection. Check your account or  api key on xboxapi.com. Code: 500 Description: A new login is required to get fresh access tokens 
