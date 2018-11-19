@@ -30,41 +30,6 @@
 
 ## EXAMPLE MQTT SWITCH
 
-  - platform: mqtt
-    name: "Arlo Status"
-    state_topic: "security/arlo/STATUS"
-    command_topic: "security/arlo/STATUS"
-    payload_on: "on"
-    payload_off: "off"
-    optimistic: false
-    retain: true
-          
-  - platform: mqtt
-    name: "Sleep Mode"
-    state_topic: "security/night/STATUS"
-    command_topic: "security/night/STATUS"
-    payload_on: "on"
-    payload_off: "off"
-    optimistic: false
-    retain: true
-
-  - platform: mqtt
-    name: "Away Mode"
-    state_topic: "security/away/STATUS"
-    command_topic: "security/away/STATUS"
-    payload_on: "on"
-    payload_off: "off"
-    optimistic: false
-    retain: true
-    
-  - platform: mqtt
-    name: "Minnie At Home"
-    state_topic: "family/minnie/STATUS"
-    command_topic: "family/minnie/STATUS"
-    payload_on: "on"
-    payload_off: "off"
-    optimistic: false
-    retain: true  
     
 #  - platform: template
 #    switches:
