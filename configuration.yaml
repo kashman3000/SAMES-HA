@@ -179,16 +179,7 @@ dyson:
 
  
 # JOIN
-notify:
-  - platform: joaoapps_join
-    device_id: !secret joapps_id1
-    name: James6P                                    
-    api_key: !secret joapps_api1
 
-joaoapps_join:
-  - name: James6P
-    device_id: !secret joapps_id1
-    api_key: !secret joapps_api1
 
 sensor: !include_dir_merge_list sensors    
 # scene: !include scenes.yaml       

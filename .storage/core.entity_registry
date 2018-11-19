@@ -371,8 +371,8 @@
                 "unique_id": "8f5cd893-9b47-9e8f-2fbe-c3fb8fa767f6"
             },
             {
-                "config_entry_id": "e85a4cc0e13c4bd69f58cec9f966a19a",
-                "device_id": "dece8f2e641947bca999b98390ca9014",
+                "config_entry_id": null,
+                "device_id": null,
                 "disabled_by": null,
                 "entity_id": "media_player.bedroom_tv",
                 "name": null,
@@ -410,60 +410,6 @@
                 "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
                 "device_id": "040a207896b04d61a37a99048d3f7157",
                 "disabled_by": null,
-                "entity_id": "camera.front_yard",
-                "name": null,
-                "platform": "nest",
-                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg"
-            },
-            {
-                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
-                "device_id": "9befd31069924e3c9a136401e24067b9",
-                "disabled_by": null,
-                "entity_id": "sensor.kett_street_eta",
-                "name": null,
-                "platform": "nest",
-                "unique_id": "4mKv-NB612TlaoDcAdJ1FBkn12lLQ_SmGaSMiryht4f8e2n6MRoyuw-eta"
-            },
-            {
-                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
-                "device_id": "040a207896b04d61a37a99048d3f7157",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.front_yard_camera_sound_detected",
-                "name": null,
-                "platform": "nest",
-                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-sound_detected"
-            },
-            {
-                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
-                "device_id": "9befd31069924e3c9a136401e24067b9",
-                "disabled_by": null,
-                "entity_id": "sensor.kett_street_security_state",
-                "name": null,
-                "platform": "nest",
-                "unique_id": "4mKv-NB612TlaoDcAdJ1FBkn12lLQ_SmGaSMiryht4f8e2n6MRoyuw-security_state"
-            },
-            {
-                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
-                "device_id": "040a207896b04d61a37a99048d3f7157",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.front_yard_camera_motion_detected",
-                "name": null,
-                "platform": "nest",
-                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-motion_detected"
-            },
-            {
-                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
-                "device_id": "040a207896b04d61a37a99048d3f7157",
-                "disabled_by": null,
-                "entity_id": "binary_sensor.front_yard_camera_online",
-                "name": null,
-                "platform": "nest",
-                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-online"
-            },
-            {
-                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
-                "device_id": "040a207896b04d61a37a99048d3f7157",
-                "disabled_by": null,
                 "entity_id": "binary_sensor.front_yard_camera_person_detected",
                 "name": null,
                 "platform": "nest",
@@ -480,6 +426,33 @@
             },
             {
                 "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "9befd31069924e3c9a136401e24067b9",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.kett_street_away",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "4mKv-NB612TlaoDcAdJ1FBkn12lLQ_SmGaSMiryht4f8e2n6MRoyuw-away"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "040a207896b04d61a37a99048d3f7157",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.front_yard_camera__gate_activity",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-237621"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "040a207896b04d61a37a99048d3f7157",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.front_yard_camera_online",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-online"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
                 "device_id": "040a207896b04d61a37a99048d3f7157",
                 "disabled_by": null,
                 "entity_id": "binary_sensor.front_yard_camera__garden_activity",
@@ -491,10 +464,46 @@
                 "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
                 "device_id": "040a207896b04d61a37a99048d3f7157",
                 "disabled_by": null,
-                "entity_id": "binary_sensor.front_yard_camera__gate_activity",
+                "entity_id": "binary_sensor.front_yard_camera_motion_detected",
                 "name": null,
                 "platform": "nest",
-                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-237621"
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-motion_detected"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "040a207896b04d61a37a99048d3f7157",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.front_yard_camera_sound_detected",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-sound_detected"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "040a207896b04d61a37a99048d3f7157",
+                "disabled_by": null,
+                "entity_id": "camera.front_yard",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "9befd31069924e3c9a136401e24067b9",
+                "disabled_by": null,
+                "entity_id": "sensor.kett_street_security_state",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "4mKv-NB612TlaoDcAdJ1FBkn12lLQ_SmGaSMiryht4f8e2n6MRoyuw-security_state"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "9befd31069924e3c9a136401e24067b9",
+                "disabled_by": null,
+                "entity_id": "sensor.kett_street_eta",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "4mKv-NB612TlaoDcAdJ1FBkn12lLQ_SmGaSMiryht4f8e2n6MRoyuw-eta"
             }
         ]
     },
