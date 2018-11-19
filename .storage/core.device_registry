@@ -1,0 +1,170 @@
+{
+    "data": {
+        "devices": [
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "f725ea791241480c8a34d5be5e9cf5df",
+                "identifiers": [
+                    [
+                        "cast",
+                        "cd6c035ef28e036081aeb656353663d8"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast Audio",
+                "name": "Music House",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "e4196d530e4c46839a33a9f692b3c8f6",
+                "identifiers": [
+                    [
+                        "cast",
+                        "51cdbc824771397eff56a1016060fd9a"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Family Room TV",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "ebbad8fa3e724772aef1d2bd21b79f4b",
+                "identifiers": [
+                    [
+                        "cast",
+                        "8f5cd8939b479e8f2fbec3fb8fa767f6"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home",
+                "name": "Family Room speaker",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "a4b4d87311d843408ecbd78500fec3ea",
+                "identifiers": [
+                    [
+                        "cast",
+                        "730e4189cf62d5d4cbf39e3274d23c35"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "Bar speaker",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "aa35b3e0f7bd472a9c7f33672bf89da3",
+                "identifiers": [
+                    [
+                        "cast",
+                        "95247ee53fba15474a622d583d7f1774"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "Bedroom speaker",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "4936ccc4454f4870880cdf3d7799844f",
+                "identifiers": [
+                    [
+                        "cast",
+                        "28e2f215211e4f279b224aa0847c6dea"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Google Home Mini",
+                "name": "Office speaker",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "dece8f2e641947bca999b98390ca9014",
+                "identifiers": [
+                    [
+                        "cast",
+                        "1f33b1a1de8ecbb20b971616d9b4926c"
+                    ]
+                ],
+                "manufacturer": "Google Inc.",
+                "model": "Chromecast",
+                "name": "Bedroom TV",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "5b2466ca7c46408ea86c5f7c9901da9f"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "040a207896b04d61a37a99048d3f7157",
+                "identifiers": [
+                    [
+                        "nest",
+                        "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg"
+                    ]
+                ],
+                "manufacturer": "Nest Labs",
+                "model": "Camera",
+                "name": "Front Yard Camera",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "5b2466ca7c46408ea86c5f7c9901da9f"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "9befd31069924e3c9a136401e24067b9",
+                "identifiers": [
+                    [
+                        "nest",
+                        "4mKv-NB612TlaoDcAdJ1FBkn12lLQ_SmGaSMiryht4f8e2n6MRoyuw"
+                    ]
+                ],
+                "manufacturer": "Nest Labs",
+                "model": "Structure",
+                "name": "Kett Street",
+                "sw_version": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

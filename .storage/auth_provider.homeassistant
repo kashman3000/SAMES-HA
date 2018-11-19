@@ -1,0 +1,17 @@
+{
+    "data": {
+        "salt": "b6f49e8b183912ebf81e7f6edc422d70e7b46c9b4c228b7d2449ff1e0e5beecc",
+        "users": [
+            {
+                "password": "JDJiJDEyJG02TXFHejlIR29oYWpCQTkuMWVxNk9qSjVlNVV3RURwemEuaG52SEtwbUxZbHVDZlRNeUZD",
+                "username": "jameskj"
+            },
+            {
+                "password": "JDJiJDEyJE1tazAuR0RmMThlRkMzL2QxbXZtYS5RNi9ZbkpDOThQRnZoSS5Hc2tneFhQZWN2M2lWa1ph",
+                "username": "sam"
+            }
+        ]
+    },
+    "key": "auth_provider.homeassistant",
+    "version": 1
+}

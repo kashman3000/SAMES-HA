@@ -1,0 +1,60 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "cast",
+                "entry_id": "e85a4cc0e13c4bd69f58cec9f966a19a",
+                "source": "discovery",
+                "title": "Google Cast",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "port_mapping": true,
+                    "sensors": true,
+                    "ssdp_description": "http://192.168.87.1:5000/rootDesc.xml",
+                    "udn": "uuid:e12a7d6a-cae4-436e-9648-a82c1c171b67"
+                },
+                "domain": "upnp",
+                "entry_id": "c297d6a4361049769a8c3d011fbfa3f7",
+                "source": "user",
+                "title": "OnHub",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "port_mapping": true,
+                    "sensors": true,
+                    "ssdp_description": "http://192.168.87.1:5000/rootDesc.xml",
+                    "udn": "uuid:ba6df46c-044c-4120-ac14-432f7b2b97ad"
+                },
+                "domain": "upnp",
+                "entry_id": "e3cfee3362f84555a287216ef2943326",
+                "source": "discovery",
+                "title": "OnHub",
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "impl_domain": "nest",
+                    "tokens": {
+                        "access_token": "c.VqVJez9X4fdCavWO10DbiXfZm1PlxLmEjI3ztpLavktFCrELznvFUxqe6OnyVUKF5IMuZhIKG3bZCXCQGPgnlmyLEI7ahjwHDJXs0MAmF6ppxfkcyiyROT23DmwHu76yoPkrHgLENI38qbEi",
+                        "expires_in": 315360000
+                    }
+                },
+                "domain": "nest",
+                "entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "source": "import",
+                "title": "Nest (via configuration.yaml)",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}
