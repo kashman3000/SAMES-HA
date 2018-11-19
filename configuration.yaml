@@ -112,6 +112,10 @@ light:
   
 #CAMERAS  
 ##    
+nest:
+  client_id: !secret nest_ID
+  client_secret: !secret nest_secret
+
   
 ##ANDROID
 # android_ip_webcam:
