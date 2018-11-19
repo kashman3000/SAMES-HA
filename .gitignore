@@ -1,4 +1,6 @@
-
 secrets.yaml
 phue.conf
 plex.conf
+home-assistant_v2.db
+core
+deps
