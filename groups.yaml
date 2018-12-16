@@ -236,14 +236,13 @@
   home_alarm:
     view: no
     name: Home Alarm
-      - sensor.security_alert
-      - sensor.motion_alert_trigger
-      - sensor.door_alert_trigger
-      
+      - sensor.house_occupied
+
   security_states:
     view: no
     name: Security States
     entities:
+      - sensor.house_occupied
       - input_boolean.mode_away
       - input_boolean.mode_night
       - input_boolean.mode_sleep

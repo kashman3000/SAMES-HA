@@ -38,20 +38,16 @@
     
   james_phone_charge:
     name: James Mobile Charging
-    initial: off
     icon: mdi:battery-charging
     
   james_wifi_connected:
     name: James WiFi
-    initial: on
     icon: mdi:access-point
     
   james_tab_wifi_connected:
     name: James Tablet WiFi
-    initial: off
     icon: mdi:access-point
     
   sam_wifi_connected:
     name: Sam WiFi
-    initial: on
     icon: mdi:access-point

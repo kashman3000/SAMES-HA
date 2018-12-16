@@ -1,283 +1,211 @@
 {
     "data": [
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Sam WiFi",
-                    "icon": "mdi:access-point"
-                },
-                "context": {
-                    "id": "a9fab46f7b9a4a08ba2083f0831a46f9",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.sam_wifi_connected",
-                "last_changed": "2018-12-16T06:45:00.202317+00:00",
-                "last_updated": "2018-12-16T06:45:00.202317+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Night Mode",
-                    "icon": "mdi:weather-night"
-                },
-                "context": {
-                    "id": "da45b066a5a94a7d936b8dd922a42fcf",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.mode_night",
-                "last_changed": "2018-12-16T06:45:00.202871+00:00",
-                "last_updated": "2018-12-16T06:45:00.202871+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Sleep Mode",
-                    "icon": "mdi:sleep"
-                },
-                "context": {
-                    "id": "e07f6985f6d843358fe684c370d9b72d",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.mode_sleep",
-                "last_changed": "2018-12-16T06:45:00.203362+00:00",
-                "last_updated": "2018-12-16T06:45:00.203362+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Minnie Home",
                     "icon": "mdi:dog-side"
                 },
                 "context": {
-                    "id": "6209055ec4784e74bf5b1b321960bd65",
+                    "id": "f7daeb1ebc9d4d859988831ba7aad4c7",
                     "user_id": null
                 },
                 "entity_id": "input_boolean.minnie_home",
-                "last_changed": "2018-12-16T06:45:00.203853+00:00",
-                "last_updated": "2018-12-16T06:45:00.203853+00:00",
+                "last_changed": "2018-12-16T06:58:54.430914+00:00",
+                "last_updated": "2018-12-16T06:58:54.430914+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Welcome Greeting",
-                    "icon": "mdi:bell-ring"
-                },
-                "context": {
-                    "id": "8baf371986524cbea9ae224c280c52a6",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.welcome_home",
-                "last_changed": "2018-12-16T06:45:00.204334+00:00",
-                "last_updated": "2018-12-16T06:45:00.204334+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Office Alert",
                     "icon": "mdi:eye"
                 },
                 "context": {
-                    "id": "eb4c669fc6d947f78fbb910997641135",
+                    "id": "4bdca51ecea04fc696ec7a2a3131ea54",
                     "user_id": null
                 },
                 "entity_id": "input_boolean.office_alert",
-                "last_changed": "2018-12-16T06:45:00.204809+00:00",
-                "last_updated": "2018-12-16T06:45:00.204809+00:00",
+                "last_changed": "2018-12-16T06:58:54.431346+00:00",
+                "last_updated": "2018-12-16T06:58:54.431346+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Notifications",
-                    "icon": "mdi:bell-ring"
-                },
-                "context": {
-                    "id": "dc735a65331b4af9bf561c585ef864d6",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.notifications",
-                "last_changed": "2018-12-16T06:45:00.205294+00:00",
-                "last_updated": "2018-12-16T06:45:00.205294+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "James Mobile Charging",
-                    "icon": "mdi:battery-charging"
-                },
-                "context": {
-                    "id": "ad0bb88d034b4e25804c7eeb009e8d08",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.james_phone_charge",
-                "last_changed": "2018-12-16T06:45:00.205790+00:00",
-                "last_updated": "2018-12-16T06:45:00.205790+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Morning Greeting",
-                    "icon": "mdi:bell-ring"
-                },
-                "context": {
-                    "id": "4054ad3e225e4bd0aed2312a50220809",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.morning_first",
-                "last_changed": "2018-12-16T06:45:00.206275+00:00",
-                "last_updated": "2018-12-16T06:45:00.206275+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "James WiFi",
-                    "icon": "mdi:access-point"
-                },
-                "context": {
-                    "id": "96fc6a28d3fd488181bca6ddef9e74df",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.james_wifi_connected",
-                "last_changed": "2018-12-16T06:45:00.206753+00:00",
-                "last_updated": "2018-12-16T06:45:00.206753+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Away Mode",
-                    "icon": "mdi:alarm-light"
-                },
-                "context": {
-                    "id": "0cfeba66a6f443bba98e097b9f821602",
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.mode_away",
-                "last_changed": "2018-12-16T06:45:00.207241+00:00",
-                "last_updated": "2018-12-16T06:45:00.207241+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "James Tablet WiFi",
                     "icon": "mdi:access-point"
                 },
                 "context": {
-                    "id": "3832af670f1d4ff089de48af445fdcfd",
+                    "id": "6e155e2cf6564d78acc72b2219904a81",
                     "user_id": null
                 },
                 "entity_id": "input_boolean.james_tab_wifi_connected",
-                "last_changed": "2018-12-16T06:45:00.207719+00:00",
-                "last_updated": "2018-12-16T06:45:00.207719+00:00",
+                "last_changed": "2018-12-16T06:58:54.431744+00:00",
+                "last_updated": "2018-12-16T06:58:54.431744+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Set Away Mode OFF when we are home",
-                    "id": "auto31",
-                    "last_triggered": null
+                    "friendly_name": "Sam WiFi",
+                    "icon": "mdi:access-point"
                 },
                 "context": {
-                    "id": "2873680138d548ae8dd3a337703aadc7",
+                    "id": "1ce1b48fe4674634af975c75dc20dc27",
                     "user_id": null
                 },
-                "entity_id": "automation.set_away_mode_off_when_we_are_home",
-                "last_changed": "2018-12-16T06:45:00.208290+00:00",
-                "last_updated": "2018-12-16T06:45:00.208290+00:00",
-                "state": "off"
+                "entity_id": "input_boolean.sam_wifi_connected",
+                "last_changed": "2018-12-16T06:58:54.432135+00:00",
+                "last_updated": "2018-12-16T06:58:54.432135+00:00",
+                "state": "on"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Sleep Mode Triggered On",
-                    "id": "auto35",
-                    "last_triggered": null
+                    "friendly_name": "Welcome Greeting",
+                    "icon": "mdi:bell-ring"
                 },
                 "context": {
-                    "id": "4a53606131dc45dbba3ce144c628e113",
+                    "id": "acb30daf1d0447df9ca99b2a64497950",
                     "user_id": null
                 },
-                "entity_id": "automation.sleep_mode_triggered_on",
-                "last_changed": "2018-12-16T06:45:00.208853+00:00",
-                "last_updated": "2018-12-16T06:45:00.208853+00:00",
+                "entity_id": "input_boolean.welcome_home",
+                "last_changed": "2018-12-16T06:58:54.432515+00:00",
+                "last_updated": "2018-12-16T06:58:54.432515+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Away Mode Triggered On",
-                    "id": "auto32",
-                    "last_triggered": null
+                    "friendly_name": "James WiFi",
+                    "icon": "mdi:access-point"
                 },
                 "context": {
-                    "id": "96bbda465ba647fc9d864edb22a90fee",
+                    "id": "db5c8f79700943bbb47d80f3f2495da2",
                     "user_id": null
                 },
-                "entity_id": "automation.away_mode_triggered_on",
-                "last_changed": "2018-12-16T06:45:00.209412+00:00",
-                "last_updated": "2018-12-16T06:45:00.209412+00:00",
-                "state": "off"
+                "entity_id": "input_boolean.james_wifi_connected",
+                "last_changed": "2018-12-16T06:58:54.432863+00:00",
+                "last_updated": "2018-12-16T06:58:54.432863+00:00",
+                "state": "on"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Away Mode Triggered off",
-                    "id": "auto33",
-                    "last_triggered": null
+                    "friendly_name": "Away Mode",
+                    "icon": "mdi:alarm-light"
                 },
                 "context": {
-                    "id": "fc7b3db7d5794c5f9e231e9090579849",
+                    "id": "9ef57137f1a444758199c9002f0e2988",
                     "user_id": null
                 },
-                "entity_id": "automation.away_mode_triggered_off",
-                "last_changed": "2018-12-16T06:45:00.209909+00:00",
-                "last_updated": "2018-12-16T06:45:00.209909+00:00",
+                "entity_id": "input_boolean.mode_away",
+                "last_changed": "2018-12-16T06:58:54.433207+00:00",
+                "last_updated": "2018-12-16T06:58:54.433207+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Morning Greeting",
+                    "icon": "mdi:bell-ring"
+                },
+                "context": {
+                    "id": "2ce03e454f374b69bb068f7b0d08466f",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.morning_first",
+                "last_changed": "2018-12-16T06:58:54.433582+00:00",
+                "last_updated": "2018-12-16T06:58:54.433582+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Notification status",
+                    "icon": "mdi:bell-ring"
+                },
+                "context": {
+                    "id": "7c80ae8ff6a54905b68232bd408fae2c",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.notifications",
+                "last_changed": "2018-12-16T06:58:54.433978+00:00",
+                "last_updated": "2018-12-16T06:58:54.433978+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "James Mobile Charging",
+                    "icon": "mdi:battery-charging"
+                },
+                "context": {
+                    "id": "56e82b8bfac6476882cc0a46c0ac4bc8",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.james_phone_charge",
+                "last_changed": "2018-12-16T06:58:54.434351+00:00",
+                "last_updated": "2018-12-16T06:58:54.434351+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sleep Mode",
+                    "icon": "mdi:sleep"
+                },
+                "context": {
+                    "id": "5f2c39a481f748d1ab3b098582de266e",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.mode_sleep",
+                "last_changed": "2018-12-16T06:58:54.434701+00:00",
+                "last_updated": "2018-12-16T06:58:54.434701+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Night Mode",
+                    "icon": "mdi:weather-night"
+                },
+                "context": {
+                    "id": "4629897531e64fafbc9f516143335c56",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.mode_night",
+                "last_changed": "2018-12-16T06:58:54.435044+00:00",
+                "last_updated": "2018-12-16T06:58:54.435044+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "James Blanket Alert",
@@ -285,53 +213,17 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "8e48ff817f254f178ecd2327e8bcf9a7",
+                    "id": "00d341a02ec94af6bc9a3a194e76df66",
                     "user_id": null
                 },
                 "entity_id": "automation.james_blanket_alert",
-                "last_changed": "2018-12-16T06:45:00.210303+00:00",
-                "last_updated": "2018-12-16T06:45:00.210303+00:00",
+                "last_changed": "2018-12-16T06:58:54.435460+00:00",
+                "last_updated": "2018-12-16T06:58:54.435460+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Alert James when Sam Comes Home",
-                    "id": "auto28",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "a31ccf0c57664138b7c9267246448fe3",
-                    "user_id": null
-                },
-                "entity_id": "automation.alert_james_when_sam_comes_home",
-                "last_changed": "2018-12-16T06:45:00.210686+00:00",
-                "last_updated": "2018-12-16T06:45:00.210686+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "James Blanket Alert",
-                    "id": "auto16",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "ae73005fed15439786c0200bb23dfefe",
-                    "user_id": null
-                },
-                "entity_id": "automation.james_blanket_alert_2",
-                "last_changed": "2018-12-16T06:45:00.211068+00:00",
-                "last_updated": "2018-12-16T06:45:00.211068+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "JAMES BLANKET OFF",
@@ -339,233 +231,17 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "7cadb1b068d44a82b6711e42b6b46671",
+                    "id": "710002cf2a8946e7b959bcf745937c83",
                     "user_id": null
                 },
                 "entity_id": "automation.james_blanket_off",
-                "last_changed": "2018-12-16T06:45:00.211446+00:00",
-                "last_updated": "2018-12-16T06:45:00.211446+00:00",
+                "last_changed": "2018-12-16T06:58:54.435862+00:00",
+                "last_updated": "2018-12-16T06:58:54.435862+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "JAMES BLANKET OFF",
-                    "id": "auto17",
-                    "last_triggered": "2018-12-15T19:16:18.677658+00:00"
-                },
-                "context": {
-                    "id": "d98a953c216b425aa246f1704354943b",
-                    "user_id": null
-                },
-                "entity_id": "automation.james_blanket_off_2",
-                "last_changed": "2018-12-16T06:45:00.212319+00:00",
-                "last_updated": "2018-12-16T06:45:00.212319+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Sleep Mode Off",
-                    "id": "auto7",
-                    "last_triggered": "2018-12-16T05:49:28.017194+00:00"
-                },
-                "context": {
-                    "id": "9a3ad8cedf314b3e83710d063cfd6d55",
-                    "user_id": null
-                },
-                "entity_id": "automation.sleep_mode_off",
-                "last_changed": "2018-12-16T06:45:00.212727+00:00",
-                "last_updated": "2018-12-16T06:45:00.212727+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Office Alert",
-                    "id": "auto223",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "5c0951127cb5431d9e22f40472ef67e2",
-                    "user_id": null
-                },
-                "entity_id": "automation.office_alert",
-                "last_changed": "2018-12-16T06:45:00.213114+00:00",
-                "last_updated": "2018-12-16T06:45:00.213114+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "JAMES BLANKET ON",
-                    "id": "auto15",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "a5ba75d5607649a69a835f0ffdae4b6d",
-                    "user_id": null
-                },
-                "entity_id": "automation.james_blanket_on",
-                "last_changed": "2018-12-16T06:45:00.213586+00:00",
-                "last_updated": "2018-12-16T06:45:00.213586+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Family Motion On",
-                    "id": "auto23",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "63a92b2afcb647e1a322be3e95bb89ef",
-                    "user_id": null
-                },
-                "entity_id": "automation.family_motion_on",
-                "last_changed": "2018-12-16T06:45:00.214029+00:00",
-                "last_updated": "2018-12-16T06:45:00.214029+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Generic IFTTT Webhook",
-                    "id": "auto55555",
-                    "last_triggered": "2018-12-16T06:05:45.159958+00:00"
-                },
-                "context": {
-                    "id": "26f2fbc9fff540248291017ee0858871",
-                    "user_id": null
-                },
-                "entity_id": "automation.generic_ifttt_webhook",
-                "last_changed": "2018-12-16T06:45:00.214462+00:00",
-                "last_updated": "2018-12-16T06:45:00.214462+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Any Door Triggered During Night Mode",
-                    "id": "auto360",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "691fd64aee2d4559a3eb51ce48a43177",
-                    "user_id": null
-                },
-                "entity_id": "automation.any_door_triggered_during_night_mode",
-                "last_changed": "2018-12-16T06:45:00.214900+00:00",
-                "last_updated": "2018-12-16T06:45:00.214900+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Sleep Mode Triggered Off",
-                    "id": "auto36",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "a111008bd414433587ac0bdff63489c1",
-                    "user_id": null
-                },
-                "entity_id": "automation.sleep_mode_triggered_off",
-                "last_changed": "2018-12-16T06:45:00.215342+00:00",
-                "last_updated": "2018-12-16T06:45:00.215342+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Arlo Armed",
-                    "id": "auto37",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "268a2c890a574288a82b6a28f9ea887b",
-                    "user_id": null
-                },
-                "entity_id": "automation.arlo_armed",
-                "last_changed": "2018-12-16T06:45:00.215745+00:00",
-                "last_updated": "2018-12-16T06:45:00.215745+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Arlo Disarmed",
-                    "id": "auto38",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "3de275f0b26641469738157dc8a97077",
-                    "user_id": null
-                },
-                "entity_id": "automation.arlo_disarmed",
-                "last_changed": "2018-12-16T06:45:00.216182+00:00",
-                "last_updated": "2018-12-16T06:45:00.216182+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Arlo Alert at night",
-                    "id": "auto39",
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "fed377279db74d1e837f46c5d88e8ed0",
-                    "user_id": null
-                },
-                "entity_id": "automation.arlo_alert_at_night",
-                "last_changed": "2018-12-16T06:45:00.216615+00:00",
-                "last_updated": "2018-12-16T06:45:00.216615+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "JAMES BLANKET ON",
-                    "id": "blanketon",
-                    "last_triggered": "2018-12-15T10:56:24.987776+00:00"
-                },
-                "context": {
-                    "id": "c2d1e94dc3364480a90daf498f28eb1f",
-                    "user_id": null
-                },
-                "entity_id": "automation.james_blanket_on_2",
-                "last_changed": "2018-12-16T06:45:00.217048+00:00",
-                "last_updated": "2018-12-16T06:45:00.217048+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Alert James when Sam Leaves Home",
@@ -573,17 +249,425 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "23fa87d4c68f4449aa10b07f13444884",
+                    "id": "93c6ffcbe73e417782421462570c490e",
                     "user_id": null
                 },
                 "entity_id": "automation.alert_james_when_sam_leaves_home",
-                "last_changed": "2018-12-16T06:45:00.217450+00:00",
-                "last_updated": "2018-12-16T06:45:00.217450+00:00",
+                "last_changed": "2018-12-16T06:58:54.436317+00:00",
+                "last_updated": "2018-12-16T06:58:54.436317+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2018-12-16T06:45:10.363767+00:00",
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Away Mode On",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "bad00a197da544aab996bded56ec8c65",
+                    "user_id": null
+                },
+                "entity_id": "automation.away_mode_on",
+                "last_changed": "2018-12-16T06:58:54.436772+00:00",
+                "last_updated": "2018-12-16T06:58:54.436772+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Generic IFTTT Webhook",
+                    "id": "auto55555",
+                    "last_triggered": "2018-12-16T06:05:45.159958+00:00"
+                },
+                "context": {
+                    "id": "790aa2650d8845a4bba82272ed7cd4d1",
+                    "user_id": null
+                },
+                "entity_id": "automation.generic_ifttt_webhook",
+                "last_changed": "2018-12-16T06:58:54.437576+00:00",
+                "last_updated": "2018-12-16T06:58:54.437576+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Family Motion On",
+                    "id": "auto23",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "34cefe7a7fbc41299f0ad69f1076041d",
+                    "user_id": null
+                },
+                "entity_id": "automation.family_motion_on",
+                "last_changed": "2018-12-16T06:58:54.438046+00:00",
+                "last_updated": "2018-12-16T06:58:54.438046+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Away Mode Off",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "88b5cc583745439fadda9990d92fb6eb",
+                    "user_id": null
+                },
+                "entity_id": "automation.away_mode_off",
+                "last_changed": "2018-12-16T06:58:54.438496+00:00",
+                "last_updated": "2018-12-16T06:58:54.438496+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Office Alert",
+                    "id": "auto223",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "1c56f1d537c44a498eccdaddaba373d4",
+                    "user_id": null
+                },
+                "entity_id": "automation.office_alert",
+                "last_changed": "2018-12-16T06:58:54.438950+00:00",
+                "last_updated": "2018-12-16T06:58:54.438950+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Away Mode Triggered On",
+                    "id": "auto32",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "10d3d88e52b042aa8a0f7b1d25afc8cb",
+                    "user_id": null
+                },
+                "entity_id": "automation.away_mode_triggered_on",
+                "last_changed": "2018-12-16T06:58:54.439357+00:00",
+                "last_updated": "2018-12-16T06:58:54.439357+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "JAMES BLANKET ON",
+                    "id": "auto15",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "68982019f45d41249be8a7eca7a8d5be",
+                    "user_id": null
+                },
+                "entity_id": "automation.james_blanket_on",
+                "last_changed": "2018-12-16T06:58:54.439756+00:00",
+                "last_updated": "2018-12-16T06:58:54.439756+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Away Mode Triggered off",
+                    "id": "auto33",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "8ad4572318014b3ba9c79e59d79ed432",
+                    "user_id": null
+                },
+                "entity_id": "automation.away_mode_triggered_off",
+                "last_changed": "2018-12-16T06:58:54.440154+00:00",
+                "last_updated": "2018-12-16T06:58:54.440154+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "JAMES BLANKET OFF",
+                    "id": "auto17",
+                    "last_triggered": "2018-12-15T19:16:18.677658+00:00"
+                },
+                "context": {
+                    "id": "d7e1b669dd6e40eeb979a3d1237997d3",
+                    "user_id": null
+                },
+                "entity_id": "automation.james_blanket_off_2",
+                "last_changed": "2018-12-16T06:58:54.440555+00:00",
+                "last_updated": "2018-12-16T06:58:54.440555+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sleep Mode Off",
+                    "id": "auto7",
+                    "last_triggered": "2018-12-16T05:49:28.017194+00:00"
+                },
+                "context": {
+                    "id": "4d77ece0c27c48a886e05087380f916f",
+                    "user_id": null
+                },
+                "entity_id": "automation.sleep_mode_off",
+                "last_changed": "2018-12-16T06:58:54.440963+00:00",
+                "last_updated": "2018-12-16T06:58:54.440963+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "JAMES BLANKET ON",
+                    "id": "blanketon",
+                    "last_triggered": "2018-12-15T10:56:24.987776+00:00"
+                },
+                "context": {
+                    "id": "a10c9cf56abb47ae8fbc5baf14de79e6",
+                    "user_id": null
+                },
+                "entity_id": "automation.james_blanket_on_2",
+                "last_changed": "2018-12-16T06:58:54.441366+00:00",
+                "last_updated": "2018-12-16T06:58:54.441366+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "James Blanket Alert",
+                    "id": "auto16",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "f75d62bf26934471b4798e09a3451583",
+                    "user_id": null
+                },
+                "entity_id": "automation.james_blanket_alert_2",
+                "last_changed": "2018-12-16T06:58:54.441836+00:00",
+                "last_updated": "2018-12-16T06:58:54.441836+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sleep Mode Triggered On",
+                    "id": "auto35",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "cab3c2a44d41417ca244833e397819b7",
+                    "user_id": null
+                },
+                "entity_id": "automation.sleep_mode_triggered_on",
+                "last_changed": "2018-12-16T06:58:54.442289+00:00",
+                "last_updated": "2018-12-16T06:58:54.442289+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn Sleep Mode On",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "f000c1bb1a5847c1af6491fa813396f7",
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_sleep_mode_on",
+                "last_changed": "2018-12-16T06:58:54.442705+00:00",
+                "last_updated": "2018-12-16T06:58:54.442705+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sleep Mode Triggered Off",
+                    "id": "auto36",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "0379699035cc453e8f62d230d71374de",
+                    "user_id": null
+                },
+                "entity_id": "automation.sleep_mode_triggered_off",
+                "last_changed": "2018-12-16T06:58:54.443113+00:00",
+                "last_updated": "2018-12-16T06:58:54.443113+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn Sleep Mode Off",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "b13114debde741e0872be30c5c5f50b4",
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_sleep_mode_off",
+                "last_changed": "2018-12-16T06:58:54.443516+00:00",
+                "last_updated": "2018-12-16T06:58:54.443516+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Any Door Triggered During Night Mode",
+                    "id": "auto360",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "6ff1fdf7c4eb499f9c0463ad9c167c03",
+                    "user_id": null
+                },
+                "entity_id": "automation.any_door_triggered_during_night_mode",
+                "last_changed": "2018-12-16T06:58:54.443912+00:00",
+                "last_updated": "2018-12-16T06:58:54.443912+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn Night Mode Off",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "bd1436287d014360951774abe211dfec",
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_night_mode_off",
+                "last_changed": "2018-12-16T06:58:54.445579+00:00",
+                "last_updated": "2018-12-16T06:58:54.445579+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Arlo Armed",
+                    "id": "auto37",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "7fb654d6145e4914895de373948eb40f",
+                    "user_id": null
+                },
+                "entity_id": "automation.arlo_armed",
+                "last_changed": "2018-12-16T06:58:54.446041+00:00",
+                "last_updated": "2018-12-16T06:58:54.446041+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn Night Mode On",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "825a3a421824418e96d3112a61197921",
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_night_mode_on",
+                "last_changed": "2018-12-16T06:58:54.446451+00:00",
+                "last_updated": "2018-12-16T06:58:54.446451+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Arlo Disarmed",
+                    "id": "auto38",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "ebb9d50accad4becbdccab6b1d9a08db",
+                    "user_id": null
+                },
+                "entity_id": "automation.arlo_disarmed",
+                "last_changed": "2018-12-16T06:58:54.446914+00:00",
+                "last_updated": "2018-12-16T06:58:54.446914+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Arlo Alert at night",
+                    "id": "auto39",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "ab59190354f04fb9b0b56f602dc19e22",
+                    "user_id": null
+                },
+                "entity_id": "automation.arlo_alert_at_night",
+                "last_changed": "2018-12-16T06:58:54.447369+00:00",
+                "last_updated": "2018-12-16T06:58:54.447369+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:59:03.627951+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Alert James when Sam Comes Home",
+                    "id": "auto28",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "d0d9e9084a204dc7ba113d46ca52b592",
+                    "user_id": null
+                },
+                "entity_id": "automation.alert_james_when_sam_comes_home",
+                "last_changed": "2018-12-16T06:58:54.447833+00:00",
+                "last_updated": "2018-12-16T06:58:54.447833+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:57:31.224718+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Set Away Mode ON when we are away",
@@ -591,13 +675,31 @@
                     "last_triggered": "2018-12-16T06:22:38.116330+00:00"
                 },
                 "context": {
-                    "id": "677d00c138074908ad147b9819d95416",
+                    "id": "2bfbc8f3d258456ebf1f760c4f3d5160",
                     "user_id": null
                 },
                 "entity_id": "automation.set_away_mode_on_when_we_are_away",
-                "last_changed": "2018-12-16T06:45:00.217939+00:00",
-                "last_updated": "2018-12-16T06:45:00.217939+00:00",
-                "state": "off"
+                "last_changed": "2018-12-16T06:45:10.396779+00:00",
+                "last_updated": "2018-12-16T06:45:10.396779+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2018-12-16T06:57:31.210178+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Set Away Mode OFF when we are home",
+                    "id": "auto31",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "ded8538442dc41af99e5a665ee36a9ce",
+                    "user_id": null
+                },
+                "entity_id": "automation.set_away_mode_off_when_we_are_home",
+                "last_changed": "2018-12-16T06:45:10.378871+00:00",
+                "last_updated": "2018-12-16T06:45:10.378871+00:00",
+                "state": "on"
             }
         }
     ],
