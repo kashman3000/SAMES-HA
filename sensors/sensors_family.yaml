@@ -1,7 +1,29 @@
 #################################
 ###     FAMILY  SENSORS       ###
 #################################
-
+#################################
+###         FAMILY ARRIVE     ###
+#################################
+  - platform: template
+    sensors:
+      house_occupied:
+        friendly_name: "House Status"
+        value_template: >-
+            {%- if is_state("input_boolean.james_wifi_connected", "on") %}
+                occupied
+            {%- elif is_state("input_boolean.sam_wifi_connected", "on") %}
+                occupied
+            {% else %}
+                unoccupied
+            {%- endif %}
+        icon_template: >-
+            {%- if is_state("input_boolean.james_wifi_connected", "on") %}
+                mdi:home-account
+            {%- elif is_state("input_boolean.sam_wifi_connected", "on") %}
+                mdi:home-account
+            {% else %}
+                mdi:outline
+            {%- endif %} 
 
 #################################
 ###       JAMES SENSORS       ###

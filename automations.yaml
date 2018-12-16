@@ -15,6 +15,72 @@
      service_template: '{{ trigger.event.data.service }}'
      data_template:
       entity_id: '{{ trigger.event.data.entity_id }}'
+      
+      
+#################################
+###         NIGHT MODE        ###
+#################################
+ - alias: Turn Night Mode On
+   trigger:
+     platform: state
+     entity_id: sun.sun
+     to: 'below_horizon'
+   action:
+     - service: input_boolean.turn_on
+       entity_id: input_boolean.mode_night
+     - service: script.turn_on
+       entity_id: script.notify_james
+       data:
+         variables:
+           title: 'Kett Night Mode On'
+           message: 'Testing the trigger'
+        
+ - alias: Turn Night Mode Off
+   trigger:
+     platform: state
+     entity_id: sun.sun
+     to: 'above_horizon'
+   action:
+     - service: input_boolean.turn_off
+       entity_id: input_boolean.mode_night
+     - service: script.turn_on
+       entity_id: script.notify_james
+       data:
+         variables:
+           title: 'Kett Night Mode Off'
+           message: 'Testing the trigger'
+            
+#################################
+###         SLEEP MODE        ###
+#################################
+ - alias: Turn Sleep Mode On
+   trigger:
+     platform: time
+     at: '21:45:00'
+   action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.mode_sleep
+    - service: script.turn_on
+      entity_id: script.notify_james
+      data:
+        variables:
+          title: 'Kett Sleep Mode On'
+          message: 'Testing the trigger'
+        
+ - alias: Turn Sleep Mode Off
+   trigger:
+     platform: state
+     entity_id: sun.sun
+     to: 'above_horizon'
+   action:
+     - service: input_boolean.turn_off
+       entity_id: input_boolean.mode_sleep
+     - service: script.turn_on
+       entity_id: script.notify_james
+       data:
+         variables:
+           title: 'Kett Sleep Mode Off'
+           message: 'Testing the trigger'
        
 #################################
 ###   BEDROOM AUTOMATION      ###
@@ -403,37 +469,25 @@
 
      
 #################################
-###      BOTH AUTOMATION      ###
-#################################     
- - id: auto30
-   alias: 'Set Away Mode ON when we are away'
+###         AWAY MODE         ###
+#################################
+ - alias: "Away Mode On"
    trigger:
-     - platform: state
-       entity_id: binary_sensor.james_home
-       from: 'on'
-       to: 'off'
-     - platform: state
-       entity_id: binary_sensor.sam_home
-       from: 'on'
-       to: 'off'
+     platform: state
+     entity_id: sensor.house_occupied
+     to: 'unoccupied'
    action:
-    service: switch.turn_off
-    entity_id: switch.away_mode
-     
- - id: auto31
-   alias: 'Set Away Mode OFF when we are home'
+     - service: input_boolean.turn_on
+       entity_id: input_boolean.mode_away
+        
+ - alias: "Away Mode Off"
    trigger:
-     - platform: state
-       entity_id: binary_sensor.james_home
-       from: 'off'
-       to: 'on'
-     - platform: state
-       entity_id: binary_sensor.sam_home
-       from: 'off'
-       to: 'on'
+     platform: state
+     entity_id: sensor.house_occupied
+     to: 'occupied'
    action:
-    service: switch.turn_off
-    entity_id: switch.away_mode
+     - service: input_boolean.turn_off
+       entity_id: input_boolean.mode_away
      
 #################################
 ###  SECURITY : AWAY MODE     ###

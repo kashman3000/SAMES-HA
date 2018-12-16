@@ -80,32 +80,27 @@
 
 ##Notify just James  
 
-
+##Notify Sam, James and Guy   
+  notify_all:
+    sequence:
+      - condition: state
+        entity_id: input_boolean.notifications
+        state: 'on'
+      - service: notify.jamespb
+        data_template:
+          title: "{{ title }}"
+          message: "{{ message }}"
+         
+##Notify just James  
   notify_james:
     sequence:
       - condition: state
         entity_id: input_boolean.notifications
         state: 'on'
-      - service: notify.james6P
+      - service: notify.jamespb
         data_template:
           title: "{{ title }}"
           message: "{{ message }}"
-          
-  notify_james2:
-    sequence:
-      - condition: state
-        entity_id: input_boolean.notifications
-        state: 'on'
-      - service: notify.james6P
-        data:
-          title: "TEST MSG"
-          message: "This is just a test"
-          
-   # action:
-    # - service: notify.James6P
-      # data:
-        # message: 'Bedroom above 27'
-        # title: 'HOT'
 
 #################################
 ###         DOOR BELL         ###

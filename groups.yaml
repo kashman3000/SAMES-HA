@@ -73,8 +73,8 @@
   family_media:
     view: no
     entities:
-      - media_player.family_room_google_home
       - media_player.family_room_tv
+      - media_player.family_room_speaker
       
 
       
@@ -163,6 +163,7 @@
       - sensor.bar_tv_in_use
       - sensor.temperature_158d000149c1e6
       - sensor.humidity_158d000149c1e6
+      - media_player.bar_speaker
 
   Bar_camera:
     view: no
@@ -193,7 +194,6 @@
       - input_boolean.james_tab_wifi_connected
       - binary_sensor.james_home
       - binary_sensor.test_sensor
-      - script.notify_james
       
   sam:
     view: no
@@ -236,23 +236,21 @@
   home_alarm:
     view: no
     name: Home Alarm
-    entities:
-      - alarm_control_panel.sameshd
       - sensor.security_alert
       - sensor.motion_alert_trigger
       - sensor.door_alert_trigger
       
-
-
   security_states:
     view: no
     name: Security States
     entities:
-      - switch.away_mode
-      - switch.sleep_mode
-      - switch.plug_158d00012919be
-      - switch.minnie_at_home
-      - switch.arlo_status
+      - input_boolean.mode_away
+      - input_boolean.mode_night
+      - input_boolean.mode_sleep
+      - input_boolean.notifications
+      - input_boolean.morning_first
+      - input_boolean.welcome_home
+      - input_boolean.minnie_home
 
   testing:
     view: no

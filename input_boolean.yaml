@@ -1,3 +1,36 @@
+#################################
+###          SETTINGS         ###
+#################################
+
+  mode_night:
+    name: Night Mode
+    icon: mdi:weather-night
+    
+  mode_away:
+    name: Away Mode
+    icon: mdi:alarm-light
+    
+  mode_sleep:
+    name: Sleep Mode
+    icon: mdi:sleep
+    
+  notifications:
+    name: Notification status
+    initial: on
+    icon: mdi:bell-ring
+    
+  morning_first:
+    name: Morning Greeting
+    icon: mdi:bell-ring
+    
+  welcome_home:
+    name: Welcome Greeting
+    icon: mdi:bell-ring
+
+  minnie_home:
+    name: Minnie Home
+    icon: mdi:dog-side
+    
   office_alert:
     name: Office Alert
     initial: off
@@ -22,18 +55,3 @@
     name: Sam WiFi
     initial: on
     icon: mdi:access-point
-    
-  notifications:
-    name: Notifications
-    initial: on
-    icon: mdi:bell-ring
-
-  morning_first:
-    name: Morning Greeting
-    initial: off
-    icon: mdi:bell-ring
-    
-  welcome_home:
-    name: Welcome Greeting
-    initial: off
-    icon: mdi:bell-ring
