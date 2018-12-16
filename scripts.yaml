@@ -220,10 +220,6 @@
   study_alert:
     alias: "Study Alert"
     sequence:
-      - service: notify.James6P
-        data:
-          message: 'MOTION DETECTED!'
-          title: 'AERT!!'
       - service: tts.google_say
         data:
           entity_id: media_player.office_speaker

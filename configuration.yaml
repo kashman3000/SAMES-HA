@@ -22,6 +22,19 @@ recorder:
 # Enables the frontend
 frontend:
 
+cloud:
+  google_actions:
+    filter:
+      include_domains:
+        - switch
+    entity_config:
+      switch.plug_158d00012f1f84:
+        name: Family Room TV Plug
+        aliases:
+         - family room tv plug
+         - family tv plug
+        room: family room
+
 config:
 
 #map:
@@ -30,9 +43,7 @@ http:
   # Uncomment this to add a password (recommended!)
    api_password: !secret http_password
   # Uncomment this if you are using SSL or running in Docker etc
-   base_url: 192.168.87.15:812
-   cors_allowed_origins:
-    - http://192.168.87.15:7080
+   base_url: !secret base_url
     
 # Checks for available updates
 updater:
@@ -60,7 +71,8 @@ sun:
 #XIAOMI
 xiaomi_aqara:
  gateways:
-   - mac:
+   - mac: !secret xiaomi_mac
+     host: 192.168.87.22
      key: !secret xiaomi_key
   
 # mqtt:

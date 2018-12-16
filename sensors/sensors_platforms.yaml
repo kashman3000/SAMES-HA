@@ -3,15 +3,10 @@
 #################################
   - platform: yr
   
-  - platform: xbox_live
-    api_key: e6948466af0777ab98c3105e0283f92a4dfd0db3
-    xuid:
-      - 2533274823058235
-      
-  # - platform: plex
-    # name: Sames Plex
-    # username: kashman3000@gmail.com
-    # password: nookie1188
+  - platform: plex
+    name: Sames Plex
+    username: kashman3000@gmail.com
+    password: nookie1188
     
   - platform: bom
     zone_id: IDV60901
@@ -55,4 +50,4 @@
       - type: network_in
       - type: network_out
       - type: processor_use
-      - type: since_last_boot
+      - type: last_boot

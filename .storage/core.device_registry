@@ -162,6 +162,60 @@
                 "model": "Structure",
                 "name": "Kett Street",
                 "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "15bb97631c824be8a453a319c0a472c7",
+                "identifiers": [
+                    [
+                        "cast",
+                        "dd4edfc9274255f70d9243d7c855759f"
+                    ]
+                ],
+                "manufacturer": "",
+                "model": "Chromecast",
+                "name": "Study TV",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "e85a4cc0e13c4bd69f58cec9f966a19a"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "532bdfda141b4603b65d0dc469fedf3d",
+                "identifiers": [
+                    [
+                        "cast",
+                        "7140072409172191736326dc75157c00"
+                    ]
+                ],
+                "manufacturer": "",
+                "model": "Chromecast",
+                "name": "Chromecast4252",
+                "sw_version": null
+            },
+            {
+                "config_entries": [
+                    "5b2466ca7c46408ea86c5f7c9901da9f"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "7dc7413997bd45bd8249286dd538da92",
+                "identifiers": [
+                    [
+                        "nest",
+                        "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg"
+                    ]
+                ],
+                "manufacturer": "Nest Labs",
+                "model": "Camera",
+                "name": "Backyard Camera",
+                "sw_version": null
             }
         ]
     },

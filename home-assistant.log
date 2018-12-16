@@ -1,38 +1,13 @@
-2018-11-19 18:03:09 ERROR (MainThread) [homeassistant.setup] Setup failed for mqtt: Component failed to initialize.
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of switch.mqtt. Setup failed for dependencies: mqtt
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform switch.mqtt: Could not set up all dependencies.
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of switch.mqtt. Setup failed for dependencies: mqtt
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform switch.mqtt: Could not set up all dependencies.
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of switch.mqtt. Setup failed for dependencies: mqtt
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform switch.mqtt: Could not set up all dependencies.
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to set up dependencies of switch.mqtt. Setup failed for dependencies: mqtt
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform switch.mqtt: Could not set up all dependencies.
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.config_entries] Error setting up entry OnHub for upnp
+2018-12-16 16:34:05 ERROR (SyncWorker_10) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.87.56, Family Room Lamp: A socket error occurred when sending the command.
+2018-12-16 16:34:07 ERROR (SyncWorker_0) [homeassistant.components.dyson] Unable to connect to device NetworkDevice(name=Office Hot+Cool,address=192.168.87.127,port=1883): [Errno 113] No route to host
+2018-12-16 17:04:26 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.139781993195336] Error handling message: {'type': 'cloud/cloudhook/create', 'webhook_id': '8a261db22a97594f9ce23640f82dcd6987a09764650641358b103d8d9fdaf449', 'id': 18}
 Traceback (most recent call last):
-  File "/usr/src/app/homeassistant/config_entries.py", line 244, in async_setup
-    result = await component.async_setup_entry(hass, self)
-  File "/usr/src/app/homeassistant/components/upnp/__init__.py", line 143, in async_setup_entry
-    await device.async_add_port_mappings(ports, local_ip)
-  File "/usr/src/app/homeassistant/components/upnp/device.py", line 66, in async_add_port_mappings
-    internal_port)
-  File "/usr/src/app/homeassistant/components/upnp/device.py", line 87, in _async_add_port_mapping
-    lease_duration=None)
-  File "/usr/local/lib/python3.6/site-packages/async_upnp_client/igd.py", line 219, in async_add_port_mapping
-    await action.async_call(
-AttributeError: 'NoneType' object has no attribute 'async_call'
-2018-11-19 18:03:10 ERROR (MainThread) [homeassistant.config_entries] Error setting up entry OnHub for upnp
-Traceback (most recent call last):
-  File "/usr/src/app/homeassistant/config_entries.py", line 244, in async_setup
-    result = await component.async_setup_entry(hass, self)
-  File "/usr/src/app/homeassistant/components/upnp/__init__.py", line 143, in async_setup_entry
-    await device.async_add_port_mappings(ports, local_ip)
-  File "/usr/src/app/homeassistant/components/upnp/device.py", line 66, in async_add_port_mappings
-    internal_port)
-  File "/usr/src/app/homeassistant/components/upnp/device.py", line 87, in _async_add_port_mapping
-    lease_duration=None)
-  File "/usr/local/lib/python3.6/site-packages/async_upnp_client/igd.py", line 219, in async_add_port_mapping
-    await action.async_call(
-AttributeError: 'NoneType' object has no attribute 'async_call'
-2018-11-19 18:03:12 ERROR (SyncWorker_19) [homeassistant.components.sensor.xbox_live] Can't setup XboxAPI connection. Check your account or  api key on xboxapi.com. Code: 500 Description: A new login is required to get fresh access tokens 
-2018-11-19 18:03:13 ERROR (SyncWorker_22) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.87.56, Family Room Lamp: A socket error occurred when sending the command.
-2018-11-19 18:03:16 ERROR (SyncWorker_2) [homeassistant.components.dyson] Unable to connect to device NetworkDevice(name=Office Hot+Cool,address=192.168.87.127,port=1883): [Errno 113] No route to host
+  File "/usr/src/app/homeassistant/components/websocket_api/decorators.py", line 16, in _handle_async_response
+    await func(hass, connection, msg)
+  File "/usr/src/app/homeassistant/components/cloud/http_api.py", line 292, in with_error_handling
+    await handler(hass, connection, msg)
+  File "/usr/src/app/homeassistant/components/cloud/http_api.py", line 355, in websocket_hook_create
+    hook = await cloud.cloudhooks.async_create(msg['webhook_id'])
+  File "/usr/src/app/homeassistant/components/cloud/cloudhooks.py", line 28, in async_create
+    raise ValueError('Hook is already enabled for the cloud.')
+ValueError: Hook is already enabled for the cloud.

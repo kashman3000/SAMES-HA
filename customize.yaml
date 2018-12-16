@@ -81,7 +81,7 @@
     
 ### POWER PLUGS
   switch.plug_158d0001291c87:
-    friendly_name: James E Blanket
+    friendly_name: Bedroom Fan
     icon: mdi:power-plug
   switch.plug_158d00012919be:
     friendly_name: Coffee machine
@@ -105,7 +105,7 @@
     friendly_name: Pool Heater
     icon: mdi:power-plug
   switch.plug_158d0001db1643:
-    friendly_name: Pool Filter
+    friendly_name: Christmas Tree
     icon: mdi:power-plug
  
     

@@ -169,92 +169,6 @@
     entities:
       - camera.bar_camera
       
-            
-#################################
-###        TEMPERATURE        ###
-#################################
-# ##VIEWS
-  # Temperature:
-    # view: yes
-    # icon: mdi:temperature-celsius
-    # entities:
-      # - group.day
-      # - group.family_temp
-      # - group.bedroom_temp
-      # - group.study_temp
-      # - group.peppercorn_temp
-# ##ROOMS     
-  # family_temp:
-    # view: no
-    # name: Family Room Temp
-    # entities:
-      # - sensor.temperature_158d0001531a78
-      # - sensor.humidity_158d0001531a78
-      # - sensor.family_room_stats_mean
-      
-  # bedroom_temp:
-    # view: no
-    # name: Main Bedroom Temp
-    # entities:
-      # - sensor.broadlink_sensor_temperature
-
-  # study_temp:
-    # view: no
-    # name: Study Temp
-    # entities:
-      # - sensor.temperature_158d000159c982
-      # - sensor.humidity_158d000159c982
-
-  # peppercorn_temp:
-    # view: no
-    # name: Ellie Temp
-    # entities:
-      # - sensor.temperature_158d000159c9e8
-      # - sensor.humidity_158d000159c9e8
-      # - sensor.ellie_room_stats_mean      
-
-
-#################################
-###           MEDIA           ###
-#################################
-##VIEWS
-  # Media:
-    # view: yes
-    # icon: mdi:television-classic
-    # entities:
-      # - group.media_family
-      # - group.media_bar
-      # - group.media_study
-      # - group.Media_bedroom
-      
-  # media_family:
-    # view: no
-    # name: Family Room Media
-    # entities:
-      # - media_player.family_room_home
-      # - script.tv_on
-      # - script.tv_off
-      # - script.heater_on
-      # - script.heater_off
-      # - script.soundbar_on
-      # - script.soundbar_off
-
-  # media_study:
-    # view: no
-    # name: Study Media
-    # entities:
-      # - media_player.studysound
-      
-  # media_bar:
-    # view: no
-    # name: Bar Media
-    # entities:
-      # - media_player.studysound
-
-  # media_bedroom:
-    # view: no
-    # name: Bedroom Media
-    # entities: 
  
 #################################
 ###           SAMES           ###
@@ -311,6 +225,8 @@
     icon: mdi:camcorder
     name: Household Cameras
     entities:
+      - group.front_of_house
+      - group.back_of_house
       - group.security_arlo1
       - group.security_arlo2
       - group.security_cameras
@@ -362,13 +278,31 @@
       - binary_sensor.motion_sensor_158d000113e096
       - binary_sensor.motion_sensor_158d00012304ef
       - binary_sensor.motion_sensor_158d00013f8ab9
+      
+  front_of_house:
+    view: no
+    name: Front of House
+    entities:
+      - camera.front_yard
+      - binary_sensor.front_yard_camera_online
+      - binary_sensor.front_yard_camera_motion_detected
+      - binary_sensor.front_yard_camera_person_detected
+      - binary_sensor.front_yard_camera_sound_detected
+      
+  back_of_house:
+    view: no
+    name: Back of House
+    entities:
+      - camera.backyard
+      - binary_sensor.backyard_camera_online
+      - binary_sensor.backyard_camera_motion_detected
+      - binary_sensor.backyard_camera_person_detected
+      - binary_sensor.backyard_camera_sound_detected
             
   security_arlo1:
     view: no
     name: Back of House
     entities:
-      - sensor.captured_today_samesback
-      - sensor.last_samesback
       - camera.samesback
 
       
@@ -376,8 +310,6 @@
     view: no
     name: Front of House
     entities:
-      - sensor.captured_today_samesfront
-      - sensor.last_samesfront
       - camera.samesfront
       
   # security_cameras:

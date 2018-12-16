@@ -371,8 +371,8 @@
                 "unique_id": "8f5cd893-9b47-9e8f-2fbe-c3fb8fa767f6"
             },
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "e85a4cc0e13c4bd69f58cec9f966a19a",
+                "device_id": "dece8f2e641947bca999b98390ca9014",
                 "disabled_by": null,
                 "entity_id": "media_player.bedroom_tv",
                 "name": null,
@@ -504,6 +504,132 @@
                 "name": null,
                 "platform": "nest",
                 "unique_id": "4mKv-NB612TlaoDcAdJ1FBkn12lLQ_SmGaSMiryht4f8e2n6MRoyuw-eta"
+            },
+            {
+                "config_entry_id": "e85a4cc0e13c4bd69f58cec9f966a19a",
+                "device_id": "15bb97631c824be8a453a319c0a472c7",
+                "disabled_by": null,
+                "entity_id": "media_player.booyah_meeting_a",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "dd4edfc9-2742-55f7-0d92-43d7c855759f"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "040a207896b04d61a37a99048d3f7157",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.front_yard_camera__front_garden_activity",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-208036"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "040a207896b04d61a37a99048d3f7157",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.front_yard_camera__gate_activity_2",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-203408"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "040a207896b04d61a37a99048d3f7157",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.front_yard_camera__driveway_activity_2",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "inVV6KQbGAeJV0tTAU0TVjaC8VmwVDWbsaDhci02XvCjKB1jSey2Xg-212737"
+            },
+            {
+                "config_entry_id": "e85a4cc0e13c4bd69f58cec9f966a19a",
+                "device_id": "532bdfda141b4603b65d0dc469fedf3d",
+                "disabled_by": null,
+                "entity_id": "media_player.chromecast4252",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "71400724-0917-2191-7363-26dc75157c00"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera_motion_detected",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-motion_detected"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "camera.backyard",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera__back_gate_activity",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-272204"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera__back_fence_activity",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-246277"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera_person_detected",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-person_detected"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera_online",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-online"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera__back_garden_activity",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-286180"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera_sound_detected",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-sound_detected"
+            },
+            {
+                "config_entry_id": "5b2466ca7c46408ea86c5f7c9901da9f",
+                "device_id": "7dc7413997bd45bd8249286dd538da92",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.backyard_camera__pool_activity",
+                "name": null,
+                "platform": "nest",
+                "unique_id": "O3Bd09Rd3PC0vbLmPV9yEQBhJTr25j6_88hGWpUAtrijKB1jSey2Xg-274349"
             }
         ]
     },

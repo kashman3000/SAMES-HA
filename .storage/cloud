@@ -1,0 +1,16 @@
+{
+    "data": {
+        "alexa_enabled": false,
+        "cloudhooks": {
+            "8a261db22a97594f9ce23640f82dcd6987a09764650641358b103d8d9fdaf449": {
+                "cloudhook_id": "a4ebf1e7bc85420aa6e37984a1faea80",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABcFeoNbDPWLvVBRBrSxE9OoC8TFTDaxmkpuRKmbBfA_8G4STZWE_3krGz4ufvsNZ3BYH9AepjpTLiLVGXL7qJc0SdNSARic0b3SKkTn6QKgLYBgVbo-FK1x91IPJuI3I4AYJL3eVfLRCPi67KnXK8GApziQ0sFNeujHramoITGrHU4dD0=",
+                "webhook_id": "8a261db22a97594f9ce23640f82dcd6987a09764650641358b103d8d9fdaf449"
+            }
+        },
+        "google_allow_unlock": false,
+        "google_enabled": true
+    },
+    "key": "cloud",
+    "version": 1
+}
